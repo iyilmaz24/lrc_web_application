@@ -19,9 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Link className="" href="/">
-          LEROY COLLINS INSTITUTE
-        </Link>
         <WebsiteNavigationBar />
         {children}
       </body>
