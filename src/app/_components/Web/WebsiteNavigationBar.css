@@ -13,9 +13,10 @@ p {
 .NavigationMenuRoot {
   position: relative;
   display: flex;
-  justify-content: center;
-  min-width: 100vw;
+  /* justify-content: center; */
+  /* min-width: 100vw; */
   z-index: 1;
+  gap: 2rem;
 }
 
 .NavigationMenuList {

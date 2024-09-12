@@ -31,15 +31,6 @@ export function WebsiteNavigationBar() {
             </NavigationMenu.Item> */}
 
             <NavigationMenu.Item>
-              <NavigationMenu.Link
-                className="NavigationMenuLink"
-                href="/postelection-audits-and-faqs"
-              >
-                Postelection Audits & FAQs
-              </NavigationMenu.Link>
-            </NavigationMenu.Item>
-
-            <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Dashboard <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
@@ -89,6 +80,24 @@ export function WebsiteNavigationBar() {
             </NavigationMenu.Item>
 
             <NavigationMenu.Item>
+              <NavigationMenu.Link
+                className="NavigationMenuLink"
+                href="/postelection-audits-and-faqs"
+              >
+                Postelection Audits & FAQs
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
+
+            <NavigationMenu.Item>
+              <NavigationMenu.Link
+                className="NavigationMenuLink"
+                href="/ballots"
+              >
+                Interesting Ballots
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
+
+            {/* <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Interesting Ballots
                 <CaretDownIcon className="CaretDown" aria-hidden />
@@ -133,7 +142,7 @@ export function WebsiteNavigationBar() {
                   </ListItem>
                 </ul>
               </NavigationMenu.Content>
-            </NavigationMenu.Item>
+            </NavigationMenu.Item> */}
 
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">

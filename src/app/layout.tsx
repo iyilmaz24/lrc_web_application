@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import WebsiteNavigationBar from "./_components/WebsiteNavigationBar";
+import WebsiteNavigationBar from "../app/_components/Web/WebsiteNavigationBar";
+import WebsiteNavigationMenu from "../app/_components/Mobile/WebsiteNavigationMenu";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,10 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const screenSize = 650;
   return (
     <html lang="en">
       <body className={inter.className}>
-        <WebsiteNavigationBar />
+        {screenSize > 600 ? (
+          <WebsiteNavigationBar />
+        ) : (
+          <WebsiteNavigationMenu />
+        )}
+
         {children}
       </body>
     </html>
