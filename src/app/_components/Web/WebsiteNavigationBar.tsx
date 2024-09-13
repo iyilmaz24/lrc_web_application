@@ -12,17 +12,17 @@ import Image from "next/image";
 export function WebsiteNavigationBar() {
   return (
     <>
-      <header className="p-8">
+      <header className="p-12 browser-layout flex justify-center ">
+        <Link href="/" className="flex justify-center items-center px-8">
+          <Image
+            className=""
+            src={LRC_H_LOGO}
+            alt="LeRoy Collins Institute Logo"
+            width={200}
+            height={150}
+          />
+        </Link>
         <NavigationMenu.Root className="NavigationMenuRoot">
-          <Link href="/" className="flex justify-center items-center px-8">
-            <Image
-              className=""
-              src={LRC_H_LOGO}
-              alt="LeRoy Collins Institute Logo"
-              width={200}
-              height={150}
-            />
-          </Link>
           <NavigationMenu.List className="NavigationMenuList">
             {/* <NavigationMenu.Item>
               <NavigationMenu.Link className="NavigationMenuLink" href="/">

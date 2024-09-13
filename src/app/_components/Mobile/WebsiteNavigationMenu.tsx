@@ -4,7 +4,7 @@ import LRC_H_LOGO from "@/../public/lrc-horizontal-logo.png";
 
 export default function WebsiteNavigationMenu() {
   return (
-    <header className="flex justify-center items-center">
+    <header className="flex justify-center items-center mobile-layout">
       <Link href="/" className="flex justify-center items-center">
         <Image
           className=""
