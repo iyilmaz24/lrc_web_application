@@ -24,12 +24,6 @@ export function WebsiteNavigationBar() {
         </Link>
         <NavigationMenu.Root className="NavigationMenuRoot">
           <NavigationMenu.List className="NavigationMenuList">
-            {/* <NavigationMenu.Item>
-              <NavigationMenu.Link className="NavigationMenuLink" href="/">
-                Home
-              </NavigationMenu.Link>
-            </NavigationMenu.Item> */}
-
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Dashboard <CaretDownIcon className="CaretDown" aria-hidden />
@@ -97,54 +91,16 @@ export function WebsiteNavigationBar() {
               </NavigationMenu.Link>
             </NavigationMenu.Item>
 
-            {/* <NavigationMenu.Item>
-              <NavigationMenu.Trigger className="NavigationMenuTrigger">
-                Interesting Ballots
-                <CaretDownIcon className="CaretDown" aria-hidden />
-              </NavigationMenu.Trigger>
-              <NavigationMenu.Content className="NavigationMenuContent">
-                <ul className="List two">
-                  <ListItem
-                    title="Primary Ballots with Signatures"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="General Election Ballots with Signatures"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Primary Ballots with No Votes"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Primary Ballots with Stray Marks or Other Interesting Features"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="General Election Ballots with Stray Marks, Names or Other Marks"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Primary Overvoted Governor Ballots"
-                    href="/ballots"
-                  >
-                    {" "}
-                  </ListItem>
-                </ul>
-              </NavigationMenu.Content>
-            </NavigationMenu.Item> */}
-
             <NavigationMenu.Item>
+              <NavigationMenu.Link
+                className="NavigationMenuLink"
+                href="/additional-resources"
+              >
+                Resources
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
+
+            {/* <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Resources <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
@@ -176,7 +132,7 @@ export function WebsiteNavigationBar() {
                   </ListItem>
                 </ul>
               </NavigationMenu.Content>
-            </NavigationMenu.Item>
+            </NavigationMenu.Item> */}
 
             <NavigationMenu.Item>
               <NavigationMenu.Link
