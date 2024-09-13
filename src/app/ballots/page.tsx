@@ -1,6 +1,9 @@
+import BallotSelection from "./_components/BallotSelection";
+
 export default function Page() {
   return (
-    <div className="flex p-12 green-bg min-h-screen flex-col items-center justify-between ">
+    <div className="flex p-12 green-bg min-h-screen flex-col items-center justify-between gap-8">
+      <BallotSelection />
       <div className="w-[65%] h-[80%]">
         <embed
           className="w-full h-screen"

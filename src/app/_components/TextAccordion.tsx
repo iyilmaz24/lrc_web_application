@@ -4,83 +4,79 @@ import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import "./TextAccordion.css";
 
-const TextAccordion = () => (
+const TextAccordion = ({ AccordionWide }: { AccordionWide: boolean }) => (
   <Accordion.Root
-    className="AccordionRoot AccordionWide"
+    className={`AccordionRoot ${
+      AccordionWide == true ? "AccordionWide" : "AccordionNarrow"
+    }`}
     type="single"
-    defaultValue="item-1"
+    defaultValue=""
     collapsible
   >
     <Accordion.Item className="AccordionItem" value="item-1">
-      <AccordionTrigger>
-        What does oval confidence mean and how is it determined?
-      </AccordionTrigger>
+      <AccordionTrigger>Traditional audits</AccordionTrigger>
       <AccordionContent>
-        Bubbled in ovals or choices are rated from low to high confidence based
-        upon density marks. Theoretically, the lightest marks within an oval are
-        the least confident and may need further examination or adjudication,
-        especially if the election is close. Ovals completely filled in are
-        likely to score high in confidence and have a low chance of a vote count
-        error, while an oval with only a dot or tiny ink mark or marks outside
-        of the oval are likely to score lower in confidence. In the dashboard,
-        ballots can be filtered by two oval confidence categories, either 1-20
-        or all the ballots. A low confidence oval has a low ballot confidence
-        score; the lowest score is 1. Using the 1-20 filter you can look at the
-        20 ovals with the lowest confidence for a candidate or contest. Once you
-        get past the first few low confidence ovals it is often hard to see any
-        ballot differences with the human eye. This is why we only provide the
-        filter for the lowest 20 ovals. However, you can click the column
-        heading tab for oval confidence and see confidence rankings larger than
-        20.
+        Traditional audits use a predetermined fixed percentage or number of
+        ballots or ballot types (mail, early, and Election Day), precincts or
+        tabulators where ballots are hand counted and compared to the reported
+        results from those system. In some states, various size discrepancies
+        between the hand count and machine count can lead to additional ballots
+        being selected for auditing, but this is not very common. In addition,
+        requirements can vary as to whether all or only some types of ballots
+        are included in the audit (e.g. provisional, uniform and overseas
+        voters, cured absentee). These audits do not examine the entire ballot,
+        but tend to look at specific contests. Most of these audit procedures
+        are set forth in state statues and define who, how and when the audit is
+        conducted.
       </AccordionContent>
     </Accordion.Item>
 
     <Accordion.Item className="AccordionItem" value="item-2">
-      <AccordionTrigger>
-        What does oval confidence mean and how is it determined?
-      </AccordionTrigger>
+      <AccordionTrigger>Risk-limiting audit (RLA)</AccordionTrigger>
       <AccordionContent>
-        Bubbled in ovals or choices are rated from low to high confidence based
-        upon density marks. Theoretically, the lightest marks within an oval are
-        the least confident and may need further examination or adjudication,
-        especially if the election is close. Ovals completely filled in are
-        likely to score high in confidence and have a low chance of a vote count
-        error, while an oval with only a dot or tiny ink mark or marks outside
-        of the oval are likely to score lower in confidence. In the dashboard,
-        ballots can be filtered by two oval confidence categories, either 1-20
-        or all the ballots. A low confidence oval has a low ballot confidence
-        score; the lowest score is 1. Using the 1-20 filter you can look at the
-        20 ovals with the lowest confidence for a candidate or contest. Once you
-        get past the first few low confidence ovals it is often hard to see any
-        ballot differences with the human eye. This is why we only provide the
-        filter for the lowest 20 ovals. However, you can click the column
-        heading tab for oval confidence and see confidence rankings larger than
-        20.
+        A risk-limiting audit (RLA) is a post-election tabulation auditing
+        procedure that provides statistical assurance that voting hardware and
+        software produced the correct winners. RLAs involve reviewing portions
+        of the audit trail—voter-verified paper records including paper ballots
+        themselves, paper audit trails produced by direct-recording electronic
+        voting machines, or paper ballot records produced by ballot-marking
+        devices —to identify and correct any erroneous electoral outcomes. RLAs
+        first require a ballot counting audit to ensure that the correct number
+        of ballots have been cast based upon the records in the audit trail.
+        Second, because recounting all cast ballots is time-consuming and
+        costly, RLAs assess only a random sample of ballots. The number of
+        recounted or reviewed ballots increases incrementally until a
+        predetermined “risk limit”—the highest probability that the audit will
+        not correct an incorrect outcome—is met or election administrators
+        conduct a full recount. For example, at a 5% risk limit, there is at
+        most a 5% chance that the audit will not identify an incorrect outcome.
+        The number of ballots that must be hand-counted is a function of risk
+        limit, vote margin, and (weakly) contest size. Lower risk limits entail
+        examining more ballots, as do closer elections. RLAs escalate the number
+        of ballots examined if the risk limit is not met; theoretically this
+        could include a full hand count if necessary.
       </AccordionContent>
     </Accordion.Item>
 
     <Accordion.Item className="AccordionItem" value="item-3">
-      <AccordionTrigger>
-        What does oval confidence mean and how is it determined?
-      </AccordionTrigger>
+      <AccordionTrigger>Transitive or machine audits</AccordionTrigger>
       <Accordion.Content className="AccordionContent">
         <div className="AccordionContentText">
-          Bubbled in ovals or choices are rated from low to high confidence
-          based upon density marks. Theoretically, the lightest marks within an
-          oval are the least confident and may need further examination or
-          adjudication, especially if the election is close. Ovals completely
-          filled in are likely to score high in confidence and have a low chance
-          of a vote count error, while an oval with only a dot or tiny ink mark
-          or marks outside of the oval are likely to score lower in confidence.
-          In the dashboard, ballots can be filtered by two oval confidence
-          categories, either 1-20 or all the ballots. A low confidence oval has
-          a low ballot confidence score; the lowest score is 1. Using the 1-20
-          filter you can look at the 20 ovals with the lowest confidence for a
-          candidate or contest. Once you get past the first few low confidence
-          ovals it is often hard to see any ballot differences with the human
-          eye. This is why we only provide the filter for the lowest 20 ovals.
-          However, you can click the column heading tab for oval confidence and
-          see confidence rankings larger than 20.
+          Transitive audits are re-tabulation audits that digitally rescan
+          ballots on a different voting system or tabulator and the results of
+          the two systems are compared. A transitive election audit, also known
+          as a double-count audit, runs all the ballots through two independent
+          tabulating systems. The ballots are first tabulated on the official
+          tabulator used to record final votes and then run through a second
+          tabulator from a different manufacturer with different hardware and
+          software to confirm the vote totals. If both systems report the same
+          election outcomes it provides evidence that the outcomes are correct,
+          even if it finds some variation across systems. In this case, the
+          post-election audit relies on the independence of the tabulation
+          system’s software and hardware to demonstrate the veracity of the
+          outcomes, not human confirmation. Compared to other types of
+          post-election audits, transitive audits of this type have the
+          advantage of recounting all the ballots and 100% of the contests.
         </div>
       </Accordion.Content>
     </Accordion.Item>
