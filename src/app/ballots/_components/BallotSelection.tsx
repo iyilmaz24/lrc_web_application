@@ -1,3 +1,5 @@
+"use client";
+
 import { ForwardedRef, forwardRef, LegacyRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import classnames from "classnames";
