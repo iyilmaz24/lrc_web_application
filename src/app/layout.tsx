@@ -7,7 +7,7 @@ import WebsiteNavigationMenu from "../app/_components/Mobile/WebsiteNavigationMe
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PROD_LRC",
+  title: "LRCI Web Application",
   description: "LeRoy Collins Institute",
 };
 
