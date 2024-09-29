@@ -2,7 +2,7 @@ import React from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import "./TextAccordion.css";
+import "./CSS/TextAccordion.css";
 
 const TextAccordion = ({ AccordionWide }: { AccordionWide: boolean }) => (
   <Accordion.Root

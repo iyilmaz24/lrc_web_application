@@ -1,6 +1,6 @@
 import React from "react";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import "./ScrollList.css";
+import "./CSS/ScrollList.css";
 import Link from "next/link";
 import {
   PRIMARY,
