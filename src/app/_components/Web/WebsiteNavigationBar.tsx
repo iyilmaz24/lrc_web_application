@@ -12,7 +12,7 @@ import Image from "next/image";
 export function WebsiteNavigationBar() {
   return (
     <>
-      <header className="p-12 browser-layout flex justify-center ">
+      <header className="p-12 browser-layout flex justify-center">
         <Link href="/" className="flex justify-center items-center px-8">
           <Image
             className=""
@@ -22,8 +22,8 @@ export function WebsiteNavigationBar() {
             height={150}
           />
         </Link>
-        <NavigationMenu.Root className="NavigationMenuRoot">
-          <NavigationMenu.List className="NavigationMenuList">
+        <NavigationMenu.Root className="NavigationMenuRoot ">
+          <NavigationMenu.List className="NavigationMenuList divide-x divide-gray-300">
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Dashboard <CaretDownIcon className="CaretDown" aria-hidden />

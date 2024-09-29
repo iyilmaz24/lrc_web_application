@@ -8,7 +8,7 @@ import {
   OTHER_DASHBOARDS,
   AUDIT_RESOURCES,
   SEC_OF_STATE_2022,
-} from "../_components/ScrollLists";
+} from "../static-text/ScrollLists";
 
 const ScrollAreaDemo = ({ ListType }: { ListType: string }) => {
   function resources(type: string) {

@@ -13,8 +13,8 @@ export default function Page() {
         <span className="w-[50%]">{lorem_ipsum}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-white gap-12 ">
-        <span className="w-[50%]">{lorem_ipsum}</span>
         <AvatarCircle />
+        <span className="w-[50%]">{lorem_ipsum}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
         <AvatarCircle />
