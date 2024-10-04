@@ -32,8 +32,8 @@ export default function ResourceBoard({
 
   return (
     <>
-      <div className="bg-white w-full rounded-md text-slate-700 p-4 overflow-y-scroll max-h-48">
-        <div className="font-extrabold">{Title}</div>
+      <div className="bg-white w-full  text-slate-700 p-6 overflow-y-scroll max-h-48">
+        <div className="font-extrabold pb-4">{Title}</div>
         <ol>
           {resources(ListType).map((resource) => (
             <li key={resource.key}>
