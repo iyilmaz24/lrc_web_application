@@ -1,6 +1,5 @@
 "use client";
 
-import { ForwardedRef, forwardRef, LegacyRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import classnames from "classnames";
 import {
@@ -10,10 +9,38 @@ import {
 } from "@radix-ui/react-icons";
 import "./BallotSelection.css";
 
-const BallotSelection = () => (
-  <Select.Root>
+const primaryBallotsWithSignaturesReplaced =
+  "/primary-ballots-with-signatures-replaced.pdf";
+const primaryBallotsWithNoVotes = "/primary-ballots-with-no-votes.pdf";
+const primaryBallotsWithStrayMarks = "/primary-ballots-with-stray-marks.pdf";
+const overvotedGovernorBallots = "/governor-overvotes-in-primary.pdf";
+const generalElectionBallotsWithSignatures =
+  "/general-election-ballots-with-signatures-replaced.pdf";
+const generalElectionBallotsWithStrayMarks = "/ge-ballots-with-stray-marks.pdf";
+
+const ballotOptions = {
+  "pe-bws": primaryBallotsWithSignaturesReplaced,
+  "pe-bwnv": primaryBallotsWithNoVotes,
+  "pe-bwsm": primaryBallotsWithStrayMarks,
+  "pe-ogb": overvotedGovernorBallots,
+  "ge-bws": generalElectionBallotsWithSignatures,
+  "ge-bwsm": generalElectionBallotsWithStrayMarks,
+};
+
+const BallotSelection = ({
+  selectBallot,
+}: {
+  selectBallot: (ballot: string) => void;
+}) => (
+  <Select.Root
+    onValueChange={(value) => {
+      if (value in ballotOptions) {
+        selectBallot(ballotOptions[value as keyof typeof ballotOptions]);
+      }
+    }}
+  >
     <Select.Trigger className="SelectTrigger" aria-label="Ballot">
-      <Select.Value placeholder="Select a type" />
+      <Select.Value placeholder="Select a ballot type" />
       <Select.Icon className="SelectIcon">
         <ChevronDownIcon />
       </Select.Icon>
@@ -54,33 +81,23 @@ const BallotSelection = () => (
   </Select.Root>
 );
 
-const SelectItem = forwardRef(
-  (
-    {
-      children,
-      className,
-      ...props
-    }: {
-      children: React.ReactNode;
-      className?: string;
-      value: string;
-    },
-    forwardedRef: LegacyRef<HTMLDivElement> | undefined
-  ) => {
-    return (
-      <Select.Item
-        className={classnames("SelectItem", className)}
-        {...props}
-        ref={forwardedRef}
-      >
-        <Select.ItemText>{children}</Select.ItemText>
-        <Select.ItemIndicator className="SelectItemIndicator">
-          <CheckIcon />
-        </Select.ItemIndicator>
-      </Select.Item>
-    );
-  }
-);
-SelectItem.displayName = "SelectItem";
+const SelectItem = ({
+  children,
+  className,
+  ...props
+}: {
+  children: React.ReactNode;
+  className?: string;
+  value: string;
+}) => {
+  return (
+    <Select.Item className={classnames("SelectItem", className)} {...props}>
+      <Select.ItemText>{children}</Select.ItemText>
+      <Select.ItemIndicator className="SelectItemIndicator">
+        <CheckIcon />
+      </Select.ItemIndicator>
+    </Select.Item>
+  );
+};
 
 export default BallotSelection;
