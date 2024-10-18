@@ -1,4 +1,13 @@
 import AvatarCircle from "@/app/_components/Avatar";
+import "@/app/_components/CSS/Avatar.css";
+import LonnaImage from "./_headshots/LonnaAtkeson-Headshot.jpg";
+import AustinImage from "./_headshots/AustinC-Headshot.jpg";
+import BillImage from "./_headshots/BillRoyal-Headshot.jpg";
+import CarsonImage from "./_headshots/CarsonCary-Headshot.jpeg";
+import YimengImage from "./_headshots/YimengLi-Headshot.jpg";
+import IrfanImage from "./_headshots/Irfan-Headshot.jpeg";
+import Image from "next/image";
+import { Bios } from "./_bios/team-static";
 
 export default function Page() {
   const lorem_ipsum =
@@ -8,41 +17,65 @@ export default function Page() {
       <div className="green-bg min-h-40 text-4xl font-extrabold flex justify-center items-center">
         Meet The Team
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
-      </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12 ">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
-      </div>
-      <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+      <div className="flex justify-center items-center h-80 bg-slate-200 gap-12">
+        <Image
+          src={LonnaImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%] text-sm">{Bios.Lonna}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-white gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+        <Image
+          src={YimengImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%]">{Bios.Yimeng}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+        <Image
+          src={AustinImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%]">{Bios.Austin}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-white gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+        <Image
+          src={CarsonImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%]">{Bios.Carson}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+        <Image
+          src={IrfanImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%]">{Bios.Irfan}</span>
       </div>
       <div className="flex justify-center items-center h-72 bg-white gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
-      </div>
-      <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
-        <AvatarCircle />
-        <span className="w-[50%]">{lorem_ipsum}</span>
+        <Image
+          src={BillImage}
+          alt=""
+          className="AvatarRoot "
+          width={135}
+          height={135}
+        />
+        <span className="w-[50%]">{Bios.Bill}</span>
       </div>
     </>
   );

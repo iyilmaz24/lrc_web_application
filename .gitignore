@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/app/meet-the-team/_headshots/
+/src/app/meet-the-team/_bios/
+
