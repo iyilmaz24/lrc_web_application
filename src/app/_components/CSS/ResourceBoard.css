@@ -1,0 +1,22 @@
+.resource-board {
+  overflow-y: scroll;
+}
+
+.resource-board::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 4px !important;
+}
+
+.resource-board::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.resource-board::-webkit-scrollbar:horizontal {
+  height: 4px !important;
+}
+
+.resource-board::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, 0.5);
+}

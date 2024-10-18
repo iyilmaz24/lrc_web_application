@@ -6,6 +6,7 @@ import {
   AUDIT_RESOURCES,
   SEC_OF_STATE_2022,
 } from "../static-text/ScrollLists";
+import "./CSS/ResourceBoard.css";
 
 export default function ResourceBoard({
   ListType,
@@ -32,12 +33,14 @@ export default function ResourceBoard({
 
   return (
     <>
-      <div className="bg-white w-full  text-slate-700 p-6 overflow-y-scroll max-h-48">
-        <div className="font-extrabold pb-4">{Title}</div>
+      <div className="bg-white w-full text-slate-700 py-6 px-10 max-h-48 resource-board">
+        <div className="font-bold pb-4 text-xl">{Title}</div>
         <ol>
           {resources(ListType).map((resource) => (
             <li key={resource.key}>
-              <Link href={resource.href}>{resource.text}</Link>
+              <Link href={resource.href} className="text-blue-700">
+                {resource.text}
+              </Link>
             </li>
           ))}
         </ol>
