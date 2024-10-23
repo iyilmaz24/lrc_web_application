@@ -73,49 +73,6 @@ export function WebsiteNavigationBar() {
             <NavigationMenu.Item>
               <NavigationMenu.Link
                 className="NavigationMenuLink"
-                href="/additional-resources"
-              >
-                Resources
-              </NavigationMenu.Link>
-            </NavigationMenu.Item>
-
-            {/* <NavigationMenu.Item>
-              <NavigationMenu.Trigger className="NavigationMenuTrigger">
-                Resources <CaretDownIcon className="CaretDown" aria-hidden />
-              </NavigationMenu.Trigger>
-              <NavigationMenu.Content className="NavigationMenuContent">
-                <ul className="List two">
-                  <ListItem
-                    title="Election Audit Technical Report"
-                    href="/additional-resources"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Leon County 2022 Election Data"
-                    href="/additional-resources"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Florida Department of State 2022 Election Data"
-                    href="/additional-resources"
-                  >
-                    {" "}
-                  </ListItem>
-                  <ListItem
-                    title="Learn More About Post-Election Audits"
-                    href="/additional-resources"
-                  >
-                    {" "}
-                  </ListItem>
-                </ul>
-              </NavigationMenu.Content>
-            </NavigationMenu.Item> */}
-
-            <NavigationMenu.Item>
-              <NavigationMenu.Link
-                className="NavigationMenuLink"
                 href="/meet-the-team"
               >
                 Team
