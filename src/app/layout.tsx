@@ -24,6 +24,7 @@ export default function RootLayout({
         <WebsiteNavigationMenu />
 
         {children}
+        <div className="green-bg min-h-20 text-4xl font-extrabold flex justify-center items-center" />
       </body>
     </html>
   );

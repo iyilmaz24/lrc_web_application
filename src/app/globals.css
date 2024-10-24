@@ -50,6 +50,16 @@ body {
   color: var(--lrc-white-text);
 }
 
+.green-btn {
+  background-color: var(--lrc-green);
+  color: var(--lrc-white-text);
+  transition: transform 0.2s ease;
+  border-radius: 0.5rem;
+}
+.green-btn:hover {
+  transform: scale(1.03);
+}
+
 .lrc-white-text {
   color: var(--lrc-white-text);
 }
