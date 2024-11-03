@@ -14,7 +14,7 @@ export default function DropDownItem({
     <>
       <div
         key={key}
-        className="bg-white p-3 gap-2 font-semibold text-lg text-black w-[80%] min-w-96 flex flex-col items-center justify-between"
+        className="bg-white p-3 gap-2 w-full font-semibold text-lg text-black flex flex-col items-center justify-between"
         onClick={() => {
           setIsOpen((isOpen) => !isOpen);
         }}

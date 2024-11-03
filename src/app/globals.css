@@ -65,7 +65,7 @@ body {
 }
 
 .green-top-border {
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   background-color: var(--lrc-green);
   color: var(--lrc-white-text);
   width: 100%;
@@ -92,6 +92,16 @@ body {
   padding: 1.5rem;
 }
 
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 0rem 6rem;
+}
+
 @media only screen and (min-width: 850px) {
   .mobile-navbar {
     display: none;
@@ -112,6 +122,9 @@ body {
   .home-content {
     flex-direction: column;
     overflow: scroll;
+  }
+  .faq-content {
+    padding: 0rem 2rem 0rem 1.25rem;
   }
   .mobile-iframe {
     width: 100%;

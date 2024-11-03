@@ -4,9 +4,7 @@ import ResourceBoard from "@/app/_components/ResourceBoard";
 export default function Page() {
   return (
     <>
-      <div className="green-bg min-h-28 text-4xl font-extrabold flex justify-center items-center">
-        How To Use The Dashboards
-      </div>
+      <div className="green-top-border">How To Use The Dashboards</div>
       <main className="w-full flex flex-col justify-center p-16 items-center gap-12 overflow-y-scroll">
         <iframe
           className="min-w-[600px] min-h-[400px]"

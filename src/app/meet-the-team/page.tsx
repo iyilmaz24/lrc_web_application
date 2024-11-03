@@ -14,9 +14,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="green-bg min-h-20 text-4xl font-extrabold flex justify-center items-center">
-        Meet The Team
-      </div>
+      <div className="green-top-border">Meet The Team</div>
       <div className="flex justify-center items-center px-32 py-4 bg-slate-200 gap-12">
         <span className="flex justify-center items-center flex-col w-[50%] text-sm gap-3 m-6">
           <div className="font-bold text-xl w-full text-center">
