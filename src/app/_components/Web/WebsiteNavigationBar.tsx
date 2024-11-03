@@ -12,7 +12,7 @@ import Image from "next/image";
 export function WebsiteNavigationBar() {
   return (
     <>
-      <header className="p-12 browser-layout flex justify-center">
+      <header className="p-12 flex justify-center desktop-navbar">
         <Link href="/" className="flex justify-center items-center px-8">
           <Image
             className=""

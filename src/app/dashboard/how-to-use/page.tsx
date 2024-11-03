@@ -1,9 +1,10 @@
+import DashboardSelection from "@/app/_components/DashboardSelection";
 import ResourceBoard from "@/app/_components/ResourceBoard";
 
 export default function Page() {
   return (
     <>
-      <div className="green-bg min-h-40 text-4xl font-extrabold flex justify-center items-center">
+      <div className="green-bg min-h-28 text-4xl font-extrabold flex justify-center items-center">
         How To Use The Dashboards
       </div>
       <main className="w-full flex flex-col justify-center p-16 items-center gap-12 overflow-y-scroll">
@@ -148,6 +149,7 @@ export default function Page() {
           </div>
           <div>Thank you!</div>
         </div>
+        <DashboardSelection />
       </main>
     </>
   );

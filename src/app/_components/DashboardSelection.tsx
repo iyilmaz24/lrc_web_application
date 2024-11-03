@@ -9,10 +9,11 @@ import {
 } from "@radix-ui/react-icons";
 import "./CSS/DashboardSelection.css";
 import { useState } from "react";
+import Link from "next/link";
 
 const dashOptions = {
-  "pe-2022": "example-path1",
-  "ge-2022": "example-path2",
+  "pe-2022": "primary-2022",
+  "ge-2022": "general-2022",
 };
 
 const DashboardSelection = () => {
@@ -60,12 +61,12 @@ const DashboardSelection = () => {
           </Select.Portal>
         </Select.Root>
 
-        <button
-          onClick={() => window.open(`dashboard/${dashboard}`)}
+        <Link
           className="green-btn p-2 w-48 text-center"
+          href={`/dashboard/${dashboard}`}
         >
           View Dashboard
-        </button>
+        </Link>
       </div>
     </>
   );

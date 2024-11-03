@@ -10,24 +10,44 @@ import Image from "next/image";
 import { Bios } from "./_bios/team-static";
 
 export default function Page() {
-  const lorem_ipsum =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+  const contactStyle = "font-bold text-center text-sm";
+
   return (
     <>
-      <div className="green-bg min-h-40 text-4xl font-extrabold flex justify-center items-center">
+      <div className="green-bg min-h-20 text-4xl font-extrabold flex justify-center items-center">
         Meet The Team
       </div>
-      <div className="flex justify-center items-center h-80 bg-slate-200 gap-12">
+      <div className="flex justify-center items-center px-32 py-4 bg-slate-200 gap-12">
+        <span className="flex justify-center items-center flex-col w-[50%] text-sm gap-3 m-6">
+          <div className="font-bold text-xl w-full text-center">
+            For Additional Information
+          </div>
+          <div>
+            Visit our website -{" "}
+            <a
+              href="https://lci.fsu.edu/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              https://lci.fsu.edu/about/
+            </a>
+          </div>
+        </span>
+      </div>
+      <div className="flex justify-center items-center h-80 bg-white gap-12 mx-8">
         <Image
           src={LonnaImage}
           alt=""
-          className="AvatarRoot "
+          className="AvatarRoot"
           width={135}
           height={135}
         />
-        <span className="w-[50%] text-sm">{Bios.Lonna}</span>
+        <span className="w-[50%] text-sm overflow-hidden overflow-y-scroll max-h-[90%]">
+          {Bios.Lonna}
+        </span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12">
+      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
         <Image
           src={YimengImage}
           alt=""
@@ -35,9 +55,11 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%]">{Bios.Yimeng}</span>
+        <span className="w-[50%] overflow-auto max-h-full py-8">
+          {Bios.Yimeng}
+        </span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
+      <div className="flex justify-center items-center h-72 bg-white gap-12">
         <Image
           src={AustinImage}
           alt=""
@@ -45,9 +67,11 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%]">{Bios.Austin}</span>
+        <span className="w-[50%] overflow-auto max-h-full py-8">
+          {Bios.Austin}
+        </span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12">
+      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
         <Image
           src={CarsonImage}
           alt=""
@@ -55,9 +79,11 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%]">{Bios.Carson}</span>
+        <span className="w-[50%] overflow-auto max-h-full py-8">
+          {Bios.Carson}
+        </span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-200 gap-12">
+      <div className="flex justify-center items-center h-72 bg-white gap-12">
         <Image
           src={IrfanImage}
           alt=""
@@ -65,9 +91,11 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%]">{Bios.Irfan}</span>
+        <span className="w-[50%] overflow-auto max-h-full py-8">
+          {Bios.Irfan}
+        </span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12">
+      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
         <Image
           src={BillImage}
           alt=""
@@ -75,7 +103,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%]">{Bios.Bill}</span>
+        <span className="w-[50%] overflow-auto max-h-full py-8">
+          {Bios.Bill}
+        </span>
       </div>
     </>
   );
