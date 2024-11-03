@@ -1,0 +1,13 @@
+export const Bios = {
+  Lonna:
+    "Lonna Rae Atkeson is the LeRoy Collins Eminent Scholar in Civic Education and Political Science at Florida State University where she also directs the LeRoy Collins Institute, a public policy think tank. She is also a board member of the MIT Data and Election Science Board (MEDSL) and the American National Election Study (ANES). Her research focuses on election science, election administration, survey research, public policy, voting rights, public opinion, and political behavior. She has been a consultant to the Department of Defense, the US Election Assistance Commission, the Pew Charitable Trusts, and has served as an expert witness or consultant on several legal cases. Her research has been supported by the National Science Foundation, Pew Charitable Trusts, the Golisano Foundation, the Thornburg Foundation, the Department of Transportation, the New Mexico Secretary of State, and Bernalillo County, New Mexico. She Received her BA from the University of California, Riverside and her PhD from the University of Colorado, Boulder.",
+  Bill: "Bill Royal, owner of Bill Royal Creative, is an award winning voice talent and producer. His work can be heard on TV and radio ads across the country, as well as audiobooks and corporate videos.",
+  Austin:
+    "Austin Culter is a third year PhD student in the Department of Political Science at Florida State University and a fellow at the LeRoy Collins Institute. His research focuses on American political behavior and public opinion. His research interests include affective polarization, race and ethnic politics, candidate selection, and partisanship. He received his Bachelor of Arts in Political Science and Anthropology from the State University of New York at Geneseo, a Master of Arts in political science from The University of Mississippi, and a Master of Science in political science from Florida State University.",
+  Carson:
+    "Carson Cary is an undergraduate computer science major at Florida State University.",
+  Yimeng:
+    "Yimeng Li is a postdoctoral researcher at the Leroy Collins Institute at Florida State University. His research focuses on American politics and quantitative methods. His research in election administration includes voting by mail, provisional ballots, voter confidence, and voting technology. He received his M.Sc. with Distinction from the London School of Economics and Political Science and Ph.D. from the California Institute of Technology.",
+  Irfan:
+    "Irfan Yilmaz is an upperclassman studying computer science at Florida State University. His interests include distributed systems, full-stack development, cloud, and finance.",
+};
