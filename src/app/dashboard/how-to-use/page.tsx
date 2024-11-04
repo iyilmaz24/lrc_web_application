@@ -5,9 +5,9 @@ export default function Page() {
   return (
     <>
       <div className="green-top-border">How To Use The Dashboards</div>
-      <main className="w-full flex flex-col justify-center p-16 items-center gap-12 overflow-y-scroll">
+      <main className="dashboard-content">
         <iframe
-          className="min-w-[600px] min-h-[400px]"
+          className="mobile-iframe"
           src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
           width={675}
           height={450}

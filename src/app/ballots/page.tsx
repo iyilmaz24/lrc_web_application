@@ -8,19 +8,19 @@ export default function Page() {
   );
 
   return (
-    <div className="flex p-12 green-bg min-h-screen flex-col items-center justify-between gap-8">
+    <div className="flex p-8 green-bg min-h-screen flex-col items-center justify-between gap-8">
       <BallotSelection selectBallot={setBallot} />
-      <div className="w-[65%] h-[80%]">
-        <embed
-          key={ballot}
-          className="w-full h-screen"
-          src={ballot}
-          type="application/pdf"
-          width="60%"
-          height="100%"
-          title="Embedded PDF Viewer"
-        />
-      </div>
+      {/* <div className="w-[100%] h-[100%]"> */}
+      <embed
+        key={ballot}
+        className="w-full h-screen"
+        src={ballot}
+        type="application/pdf"
+        width="100%"
+        height="100%"
+        title="Embedded PDF Viewer"
+      />
+      {/* </div> */}
     </div>
   );
 }

@@ -18,9 +18,10 @@ const dashOptions = {
 
 const DashboardSelection = () => {
   const [dashboard, setDashboard] = useState<string>("how-to-use");
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-6 m-6 w-full">
+      <div className="flex justify-center items-center gap-6 w-full">
         <Select.Root
           onValueChange={(value) => {
             if (value in dashOptions) {
@@ -28,7 +29,11 @@ const DashboardSelection = () => {
             }
           }}
         >
-          <Select.Trigger className="SelectTrigger" aria-label="Dashboard">
+          <Select.Trigger
+            className="SelectTrigger"
+            aria-label="Dashboard"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Select.Value placeholder="Select a dashboard type" />
             <Select.Icon className="SelectIcon">
               <ChevronDownIcon />
@@ -62,12 +67,15 @@ const DashboardSelection = () => {
         </Select.Root>
 
         <Link
-          className="green-btn p-2 w-48 text-center"
+          className={`green-btn p-3 w-24 text-center`}
           href={`/dashboard/${dashboard}`}
         >
-          View Dashboard
+          View
         </Link>
       </div>
+      {/* <span className="m-1 text-xs font-bold w-full">
+        Select dashboard and click view*
+      </span> */}
     </>
   );
 };
