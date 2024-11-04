@@ -6,13 +6,15 @@ export default function Page() {
     <>
       <div className="green-top-border">How To Use The Dashboards</div>
       <main className="dashboard-content">
-        <iframe
-          className="mobile-iframe"
-          src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
-          width={675}
-          height={450}
-        ></iframe>
-        <div className="min-h-20"></div>
+        <span className="w-[100%] h-[300px] flex justify-center items-center m-4">
+          <iframe
+            className="mobile-iframe"
+            src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
+            width={675}
+            height={450}
+          ></iframe>
+        </span>
+        {/* <div className="min-h-20"></div>
         <div className="text-sm">
           <div>
             <strong>Choice:</strong> the candidate, ballot initiative, or choice
@@ -146,8 +148,10 @@ export default function Page() {
             us know.
           </div>
           <div>Thank you!</div>
-        </div>
-        <DashboardSelection />
+        </div> */}
+        <span className="w-full m-6 mb-12">
+          <DashboardSelection />
+        </span>
       </main>
     </>
   );

@@ -16,7 +16,7 @@ button {
   font-size: 13px;
   line-height: 1;
   height: 35px;
-  width: min(40%, 350px);
+  width: max(20%, 175px);
   gap: 5px;
   background-color: white;
   color: var(--olive-11);

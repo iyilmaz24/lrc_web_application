@@ -31,13 +31,16 @@ export default function Home() {
           <span className="m-1 text-xs font-bold">Opens PDF in new tab*</span>
         </div>
 
-        <iframe
-          className="w-[320px] h-[210px] flex align-self-center"
-          src={`https://www.youtube.com/embed/${"0lcWZA_9j-s"}?`}
-          width={600}
-          height={400}
-        ></iframe>
-        <span className="m-6 w-full">
+        <span className="w-[90%] h-[300px] flex justify-center items-center m-4">
+          <iframe
+            className="w-[400px] h-[200px] flex align-self-center"
+            src={`https://www.youtube.com/embed/${"0lcWZA_9j-s"}?`}
+            width={600}
+            height={400}
+          ></iframe>
+        </span>
+
+        <span className="m-4 mb-24 w-full">
           <DashboardSelection />
         </span>
       </div>
