@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <div className="green-top-border">How To Use The Dashboards</div>
       <main className="dashboard-content">
-        <span className="w-[100%] h-[300px] flex justify-center items-center m-4">
+        <span className="w-[100%] h-[225px] flex justify-center items-center m-4">
           <iframe
             className="mobile-iframe"
             src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
@@ -14,6 +14,20 @@ export default function Page() {
             height={450}
           ></iframe>
         </span>
+        <div className="w-full text-center m-2">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.
+        </div>
+        <div className="w-full text-center m-2">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </div>
         {/* <div className="min-h-20"></div>
         <div className="text-sm">
           <div>

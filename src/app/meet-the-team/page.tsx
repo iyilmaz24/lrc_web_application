@@ -10,30 +10,25 @@ import Image from "next/image";
 import { Bios } from "./_bios/team-static";
 
 export default function Page() {
-  const contactStyle = "font-bold text-center text-sm";
-
   return (
     <>
       <div className="green-top-border">Meet The Team</div>
-      <div className="flex justify-center items-center px-32 py-4 bg-slate-200 gap-12">
-        <span className="flex justify-center items-center flex-col w-[50%] text-sm gap-3 m-6">
-          <div className="font-bold text-xl w-full text-center">
-            For Additional Information
-          </div>
-          <div>
-            Visit our website -{" "}
-            <a
-              href="https://lci.fsu.edu/about/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              https://lci.fsu.edu/about/
-            </a>
-          </div>
-        </span>
+      <div className="flex flex-col justify-center items-center bg-slate-200 p-4">
+        <div className="font-bold w-full text-center">
+          For Additional Information
+        </div>
+        <div>
+          <a
+            href="https://lci.fsu.edu/about/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline text-sm"
+          >
+            https://lci.fsu.edu/about/
+          </a>
+        </div>
       </div>
-      <div className="flex justify-center items-center h-80 bg-white gap-12 mx-8">
+      <div className={"mttDivWhite"}>
         <Image
           src={LonnaImage}
           alt=""
@@ -41,11 +36,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] text-sm overflow-hidden overflow-y-scroll max-h-[90%]">
-          {Bios.Lonna}
-        </span>
+        <span className={"bioStyle longBioStyle text-sm"}>{Bios.Lonna}</span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
+      <div className={"mttDivSlate"}>
         <Image
           src={YimengImage}
           alt=""
@@ -53,11 +46,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] overflow-auto max-h-full py-8">
-          {Bios.Yimeng}
-        </span>
+        <span className={"bioStyle text-sm"}>{Bios.Yimeng}</span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12">
+      <div className={"mttDivWhite"}>
         <Image
           src={AustinImage}
           alt=""
@@ -65,11 +56,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] overflow-auto max-h-full py-8">
-          {Bios.Austin}
-        </span>
+        <span className={"bioStyle text-sm"}>{Bios.Austin}</span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
+      <div className={"mttDivSlate"}>
         <Image
           src={CarsonImage}
           alt=""
@@ -77,11 +66,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] overflow-auto max-h-full py-8">
-          {Bios.Carson}
-        </span>
+        <span className={"bioStyle"}>{Bios.Carson}</span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-white gap-12">
+      <div className={"mttDivWhite"}>
         <Image
           src={IrfanImage}
           alt=""
@@ -89,11 +76,9 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] overflow-auto max-h-full py-8">
-          {Bios.Irfan}
-        </span>
+        <span className={"bioStyle"}>{Bios.Irfan}</span>
       </div>
-      <div className="flex justify-center items-center h-72 bg-slate-50 gap-12">
+      <div className={"mttDivSlate"}>
         <Image
           src={BillImage}
           alt=""
@@ -101,9 +86,7 @@ export default function Page() {
           width={135}
           height={135}
         />
-        <span className="w-[50%] overflow-auto max-h-full py-8">
-          {Bios.Bill}
-        </span>
+        <span className={"bioStyle"}>{Bios.Bill}</span>
       </div>
     </>
   );

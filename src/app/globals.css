@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-snap-type: none !important;
+  scroll-snap-align: unset !important;
+  scroll-snap-stop: normal !important;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -113,6 +119,37 @@ body {
   padding: 0rem 6rem;
 }
 
+.contactStyle {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+.bioStyle {
+  width: 60%;
+  overflow: auto;
+  max-height: 19rem;
+  padding: 2rem;
+}
+.longBioStyle {
+  max-height: 16rem;
+}
+.mttDivWhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  background-color: white;
+  gap: 1.5rem;
+}
+.mttDivSlate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  background-color: #fafafa;
+  gap: 1.5rem;
+}
+
 .mobile-only {
   display: none;
 }
@@ -161,6 +198,27 @@ body {
   .green-top-border {
     padding: 1.5rem;
     font-size: 1.25rem;
+  }
+
+  .bioStyle {
+    padding: 0rem 1.5rem;
+    width: 100%;
+  }
+  .mttDivWhite {
+    font-size: 1rem;
+    flex-direction: column;
+    height: fit-content;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+  .mttDivSlate {
+    font-size: 1rem;
+    flex-direction: column;
+    height: fit-content;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1.75rem;
   }
 }
 /* 

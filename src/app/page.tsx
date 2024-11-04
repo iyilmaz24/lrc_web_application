@@ -6,8 +6,10 @@ export default function Home() {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-between">
-      <div className="green-top-border">Florida Postelection Audit Project</div>
       <div className="home-page">
+        <div className="green-top-border">
+          Florida Postelection Audit Project
+        </div>
         <div className="max-w-lg text-center px-6 py-3 mt-4">
           In this project we provide information to the public about the
           accuracy of ballot counting by presenting the data from two
