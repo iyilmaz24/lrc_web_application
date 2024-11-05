@@ -31,7 +31,6 @@ export default function ImageDisplay({
           src={src}
           alt={alt}
           fill={true}
-          sizes="100vw, 100vh"
           onClick={handleImageClick}
           className="rounded image-fit"
         />
@@ -49,8 +48,7 @@ export default function ImageDisplay({
               src={src}
               alt={alt}
               fill={true}
-              sizes="(max-width: 170px) 170px, 220px"
-              className="image-contain"
+              objectFit="contain"
               onClick={handleCloseClick}
             />
           </div>

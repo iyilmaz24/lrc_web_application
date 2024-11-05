@@ -10,6 +10,7 @@ export default function Page() {
         <DropDown DropDownItems={POSTELECTION_FAQCONTENT} />
 
         <div className="m-8" />
+
         <DropDown DropDownItems={FAQCONTENT} />
       </div>
     </>

@@ -10,7 +10,7 @@ type DropDownProps = {
 export default function DropDown({ DropDownItems }: DropDownProps) {
   return (
     <>
-      <div className="divide-y divide-black min-w-full flex flex-col items-center justify-center gap-3">
+      <div className="divide-y divide-black flex flex-col items-center justify-center gap-3 min-w-full">
         {DropDownItems.map((FAQ: DropDownItemType) => (
           <DropDownItem
             {...FAQ}
