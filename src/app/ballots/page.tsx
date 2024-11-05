@@ -4,21 +4,28 @@ import { useState } from "react";
 import ImageDisplay from "./_components/ImageDisplay";
 
 export default function Page() {
+  const pbwSigReplacedCount = 20;
+  const pbwStrayMarksCount = 29;
+  const pbwNoVoteCount = 52;
+  const govOverInPrimCount = 22;
+  const gewSigReplacedCount = 24;
+  const gewStrayMarksCount = 20;
+
   const [ballot, setBallot] = useState(
     "/primary-ballots-with-signatures-replaced.pdf"
   );
 
   const [pageNum, setPageNum] = useState(0);
+  const [totalImages, setTotalImages] = useState(pbwSigReplacedCount);
   const imagesPerPage = 6;
 
   const imageFolder = "/primary-ballots-with-signatures-replaced";
-  const imageCount = 20; // Adjust this number to the actual count of images
 
   const startIndex = pageNum * imagesPerPage;
-  const endIndex = Math.min(startIndex + imagesPerPage, imageCount);
+  const endIndex = Math.min(startIndex + imagesPerPage, totalImages);
 
   const handleNext = () => {
-    if (endIndex < imageCount) {
+    if (endIndex < totalImages) {
       setPageNum(pageNum + 1);
     }
   };
@@ -57,7 +64,7 @@ export default function Page() {
             <button
               className="green-btn ballotButton"
               onClick={handleNext}
-              disabled={endIndex >= imageCount}
+              disabled={endIndex >= totalImages}
             >
               Next
             </button>
