@@ -30,10 +30,10 @@ export default function ImageDisplay({
         <Image
           src={src}
           alt={alt}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          sizes="100vw, 100vh"
           onClick={handleImageClick}
-          className="rounded"
+          className="rounded image-fit"
         />
       </div>
       {isEnlarged && (
@@ -48,8 +48,9 @@ export default function ImageDisplay({
             <Image
               src={src}
               alt={alt}
-              layout="fill"
-              objectFit="contain"
+              fill={true}
+              sizes="(max-width: 170px) 170px, 220px"
+              className="image-contain"
               onClick={handleCloseClick}
             />
           </div>
