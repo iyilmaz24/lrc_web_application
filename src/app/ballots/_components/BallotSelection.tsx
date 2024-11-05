@@ -9,22 +9,13 @@ import {
 } from "@radix-ui/react-icons";
 import "./BallotSelection.css";
 
-const primaryBallotsWithSignaturesReplaced =
-  "/primary-ballots-with-signatures-replaced.pdf";
-const primaryBallotsWithNoVotes = "/primary-ballots-with-no-votes.pdf";
-const primaryBallotsWithStrayMarks = "/primary-ballots-with-stray-marks.pdf";
-const overvotedGovernorBallots = "/governor-overvotes-in-primary.pdf";
-const generalElectionBallotsWithSignatures =
-  "/general-election-ballots-with-signatures-replaced.pdf";
-const generalElectionBallotsWithStrayMarks = "/ge-ballots-with-stray-marks.pdf";
-
 const ballotOptions = {
-  "pe-bws": primaryBallotsWithSignaturesReplaced,
-  "pe-bwnv": primaryBallotsWithNoVotes,
-  "pe-bwsm": primaryBallotsWithStrayMarks,
-  "pe-ogb": overvotedGovernorBallots,
-  "ge-bws": generalElectionBallotsWithSignatures,
-  "ge-bwsm": generalElectionBallotsWithStrayMarks,
+  "pe-bws": "primary-ballots-with-signatures-replaced",
+  "pe-bwnv": "primary-ballots-with-no-votes",
+  "pe-bwsm": "primary-ballots-with-stray-marks",
+  "pe-ogb": "governor-overvotes-in-primary",
+  "ge-bws": "general-election-ballots-with-signatures-replaced",
+  "ge-bwsm": "ge-ballots-with-stray-marks",
 };
 
 const BallotSelection = ({

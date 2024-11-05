@@ -1,6 +1,6 @@
 "use client";
 import BallotSelection from "./_components/BallotSelection";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import ImageDisplay from "./_components/ImageDisplay";
 
 export default function Page() {
@@ -11,18 +11,41 @@ export default function Page() {
   const gewSigReplacedCount = 24;
   const gewStrayMarksCount = 20;
 
-  const [ballot, setBallot] = useState(
-    "/primary-ballots-with-signatures-replaced.pdf"
+  const imageCounts = useMemo(
+    () => ({
+      "primary-ballots-with-signatures-replaced": pbwSigReplacedCount,
+      "primary-ballots-with-no-votes": pbwNoVoteCount,
+      "primary-ballots-with-stray-marks": pbwStrayMarksCount,
+      "governor-overvotes-in-primary": govOverInPrimCount,
+      "general-election-ballots-with-signatures-replaced": gewSigReplacedCount,
+      "ge-ballots-with-stray-marks": gewStrayMarksCount,
+    }),
+    [
+      pbwSigReplacedCount,
+      pbwStrayMarksCount,
+      pbwNoVoteCount,
+      govOverInPrimCount,
+      gewSigReplacedCount,
+      gewStrayMarksCount,
+    ]
   );
 
+  const [imageFolder, setImageFolder] = useState(
+    "primary-ballots-with-signatures-replaced"
+  );
+  const [totalImages, setTotalImages] = useState(
+    imageCounts[imageFolder as keyof typeof imageCounts]
+  );
   const [pageNum, setPageNum] = useState(0);
-  const [totalImages, setTotalImages] = useState(pbwSigReplacedCount);
   const imagesPerPage = 6;
-
-  const imageFolder = "/primary-ballots-with-signatures-replaced";
 
   const startIndex = pageNum * imagesPerPage;
   const endIndex = Math.min(startIndex + imagesPerPage, totalImages);
+
+  useEffect(() => {
+    setTotalImages(imageCounts[imageFolder as keyof typeof imageCounts]);
+    setPageNum(0);
+  }, [imageFolder, imageCounts]);
 
   const handleNext = () => {
     if (endIndex < totalImages) {
@@ -39,30 +62,32 @@ export default function Page() {
   const imageSrcs = Array.from(
     { length: endIndex - startIndex },
     (_, index) =>
-      `${imageFolder}/primary-ballots-with-signatures-replaced -images-${
-        startIndex + index
-      }.jpg`
+      `/${imageFolder}/${imageFolder}-images-${startIndex + index}.jpg`
   );
 
   return (
     <div className="flex p-8 green-bg min-h-screen flex-col items-center gap-8">
-      <BallotSelection selectBallot={setBallot} />
+      <BallotSelection selectBallot={setImageFolder} />
 
       <div className="flex flex-col">
         <div className="imageDisplayParent">
           {imageSrcs.map((src, index) => (
-            <ImageDisplay key={index} src={src} alt={`Image ${index + 1}`} />
+            <ImageDisplay
+              key={`${imageFolder}-${index}`}
+              src={src}
+              alt={`Image ${index + 1}`}
+            />
           ))}
           <div className="ballotButtonParent">
             <button
-              className="green-btn ballotButton"
+              className={`green-btn ballotButton `}
               onClick={handlePrevious}
               disabled={pageNum === 0}
             >
               Previous
             </button>
             <button
-              className="green-btn ballotButton"
+              className={`green-btn ballotButton `}
               onClick={handleNext}
               disabled={endIndex >= totalImages}
             >
