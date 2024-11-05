@@ -155,13 +155,31 @@ body {
 }
 
 .imageDisplayParent {
-  max-width: 900px;
+  max-width: 700px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+}
+.ballotButton {
+  background-color: white;
+  color: var(--lrc-green);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 4rem;
+}
+.ballotButtonParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 6rem;
+  margin-top: 1rem;
 }
 
 .mobile-only {
@@ -246,14 +264,16 @@ body {
     gap: 1rem;
     padding: 0rem;
   }
+}
 
-  .mobile-image-display {
-    width: 144.5px;
-    height: 187px;
+@media only screen and (max-width: 525px) {
+  .ballotButtonParent {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
   .mobile-image-display {
     width: 137.275px;
     height: 177.65px;
