@@ -129,7 +129,7 @@ body {
   font-size: 1rem;
 }
 .bioStyle {
-  width: 60%;
+  width: 50%;
   overflow: auto;
   max-height: 19rem;
   padding: 2rem;
@@ -152,6 +152,16 @@ body {
   height: 18rem;
   background-color: #fafafa;
   gap: 1.5rem;
+}
+
+.imageDisplayParent {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .mobile-only {
@@ -229,7 +239,34 @@ body {
     gap: 0.75rem;
     padding: 1.75rem;
   }
+
+  .imageDisplayParent {
+    align-items: between;
+    justify-content: between;
+    gap: 1rem;
+    padding: 0rem;
+  }
+
+  .mobile-image-display {
+    width: 144.5px;
+    height: 187px;
+  }
 }
+
+@media only screen and (max-width: 400px) {
+  .mobile-image-display {
+    width: 137.275px;
+    height: 177.65px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .mobile-image-display {
+    width: 130.41125px;
+    height: 168.7675px;
+  }
+}
+
 /* 
 .mobile-layout {
   display: none;

@@ -1,0 +1,60 @@
+"use client";
+
+import { useState, useCallback } from "react";
+import Image from "next/image";
+
+export default function ImageDisplay({
+  src = "/placeholder.svg?height=400&width=600",
+  alt = "Enlargeable PDF-like image",
+}: {
+  src?: string;
+  alt?: string;
+}) {
+  const [isEnlarged, setIsEnlarged] = useState(false);
+
+  const handleImageClick = useCallback(() => {
+    setIsEnlarged(true);
+  }, []);
+
+  const handleCloseClick = useCallback(() => {
+    setIsEnlarged(false);
+  }, []);
+
+  const handleEnlargedImageClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center bg-gray-100">
+      <div className="relative w-[170px] h-[220px] cursor-pointer shadow-md hover:shadow-lg transition-shadow duration-300 mobile-image-display">
+        <Image
+          src={src}
+          alt={alt}
+          layout="fill"
+          objectFit="cover"
+          onClick={handleImageClick}
+          className="rounded"
+        />
+      </div>
+      {isEnlarged && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={handleCloseClick}
+        >
+          <div
+            className="enlarged-image relative max-w-4xl max-h-[90vh] w-full h-full"
+            onClick={handleEnlargedImageClick}
+          >
+            <Image
+              src={src}
+              alt={alt}
+              layout="fill"
+              objectFit="contain"
+              onClick={handleCloseClick}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
