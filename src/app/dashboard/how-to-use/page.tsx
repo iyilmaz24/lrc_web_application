@@ -6,15 +6,15 @@ export default function Page() {
     <>
       <div className="green-top-border">How To Use The Dashboards</div>
       <main className="dashboard-content">
-        <span className="w-[100%] h-[225px] flex justify-center items-center m-4">
+        <span className="w-[600px] h-[350px] flex justify-center items-center m-4 mobile-iframe">
           <iframe
-            className="mobile-iframe"
+            className="flex align-self-center"
             src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
-            width={675}
-            height={450}
+            width={`100%`}
+            height={`100%`}
           ></iframe>
         </span>
-        <div className="w-full text-center m-2">
+        <div className="howToText">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -22,7 +22,7 @@ export default function Page() {
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </div>
-        <div className="w-full text-center m-2">
+        <div className="howToText">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

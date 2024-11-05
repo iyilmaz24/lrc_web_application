@@ -5,7 +5,7 @@ export default function Home() {
   const lorem_ipsum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-between">
+    <>
       <div className="home-page">
         <div className="green-top-border">
           Florida Postelection Audit Project
@@ -33,12 +33,12 @@ export default function Home() {
           <span className="m-1 text-xs font-bold">Opens PDF in new tab*</span>
         </div>
 
-        <span className="w-[90%] h-[300px] flex justify-center items-center m-4">
+        <span className=" w-[500px] h-[350px] flex justify-center items-center m-4 mobile-iframe">
           <iframe
-            className="w-[400px] h-[200px] flex align-self-center"
+            className="flex align-self-center"
             src={`https://www.youtube.com/embed/${"0lcWZA_9j-s"}?`}
-            width={600}
-            height={400}
+            width={`100%`}
+            height={`100%`}
           ></iframe>
         </span>
 
@@ -46,6 +46,6 @@ export default function Home() {
           <DashboardSelection />
         </span>
       </div>
-    </main>
+    </>
   );
 }
