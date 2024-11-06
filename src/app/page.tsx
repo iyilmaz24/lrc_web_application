@@ -10,14 +10,14 @@ export default function Home() {
         <div className="green-top-border">
           Florida Postelection Audit Project
         </div>
-        <div className="max-w-lg text-center px-6 py-3 mt-4">
+        <div className="max-w-3xl text-center px-6 py-3 mt-4">
           In this project we provide information to the public about the
           accuracy of ballot counting by presenting the data from two
           independent vote tabulators along with the ballot images from the 100%
           retabulation postelection audit done in Leon County, Florida for the
           2022 state primary and general elections.
         </div>
-        <div className="max-w-lg text-center px-6 py-3">
+        <div className="max-w-3xl text-center px-6 py-3">
           The purpose is to promote election transparency and improve voter
           confidence by providing the public with easily accessible information
           about the audit, its conclusions, and the ballots associated with the
