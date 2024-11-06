@@ -13,6 +13,7 @@ export default function Home() {
         </div>
 
         <Image
+          alt="home page art"
           className="mt-6 mobile-iframe "
           height={400}
           width={500}
