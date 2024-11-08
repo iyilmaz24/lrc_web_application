@@ -62,7 +62,9 @@ export default function Page() {
   const imageSrcs = Array.from(
     { length: endIndex - startIndex },
     (_, index) =>
-      `/${imageFolder}/${imageFolder}-images-${startIndex + index}.jpg`
+      `${process.env.NEXT_PUBLIC_S3_URL}/${imageFolder}/${imageFolder}-images-${
+        startIndex + index
+      }.jpg`
   );
 
   return (
