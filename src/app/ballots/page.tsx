@@ -63,7 +63,7 @@ export default function Page() {
     { length: endIndex - startIndex },
     (_, index) =>
       `${process.env.NEXT_PUBLIC_S3_URL}/${imageFolder}/${imageFolder}-images-${
-        startIndex + index
+        startIndex + index + 2
       }.jpg`
   );
 
