@@ -62,7 +62,7 @@ export default function Home() {
         </span>
 
         <div></div>
-        <h1 className="text-xl font-bold text-center mt-8">
+        <h1 className="text-lg font-bold text-center mt-8">
           Streamlining Public Records Requests
         </h1>
         <div className="max-w-2xl text-center px-6 py-3 mb-20 ">
