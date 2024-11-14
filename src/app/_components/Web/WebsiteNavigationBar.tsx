@@ -24,7 +24,7 @@ export function WebsiteNavigationBar() {
         </Link>
         <NavigationMenu.Root className="NavigationMenuRoot ">
           <NavigationMenu.List className="NavigationMenuList divide-x divide-gray-300">
-            <NavigationMenu.Item>
+            {/* <NavigationMenu.Item>
               <NavigationMenu.Trigger className="NavigationMenuTrigger">
                 Dashboard <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
@@ -50,6 +50,15 @@ export function WebsiteNavigationBar() {
                   </ListItem>
                 </ul>
               </NavigationMenu.Content>
+            </NavigationMenu.Item> */}
+
+            <NavigationMenu.Item>
+              <NavigationMenu.Link
+                className="NavigationMenuLink"
+                href="/dashboard/how-to-use"
+              >
+                Dashboards
+              </NavigationMenu.Link>
             </NavigationMenu.Item>
 
             <NavigationMenu.Item>

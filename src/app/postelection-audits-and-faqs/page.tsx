@@ -7,9 +7,7 @@ export default function Page() {
     <>
       <div className="green-top-border">Post-Election Audits and FAQs</div>
       <div className="green-bg faq-content">
-        <DropDown DropDownItems={POSTELECTION_FAQCONTENT} />
-
-        <div className="m-8" />
+        {/* <DropDown DropDownItems={POSTELECTION_FAQCONTENT} /> */}
 
         <DropDown DropDownItems={FAQCONTENT} />
       </div>
