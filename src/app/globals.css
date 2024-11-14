@@ -122,11 +122,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   overflow-y: scroll;
   width: 100%;
   padding: 2.5rem;
   gap: 2rem;
+  min-height: 70vh;
 }
 .howToText {
   width: 60%;
