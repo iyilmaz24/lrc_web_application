@@ -16,12 +16,20 @@ const dashOptions = {
   "ge-2022": "general-2022",
 };
 
-const DashboardSelection = () => {
+const DashboardSelection = ({
+  greenBackground,
+}: {
+  greenBackground?: boolean;
+}) => {
   const [dashboard, setDashboard] = useState<string>("how-to-use");
 
   return (
     <>
-      <div className="flex justify-center items-center gap-6 w-full">
+      <div
+        className={`flex justify-center items-center gap-6 w-full ${
+          greenBackground ? "green-bg" : ""
+        }`}
+      >
         <Select.Root
           onValueChange={(value) => {
             if (value in dashOptions) {
@@ -47,14 +55,14 @@ const DashboardSelection = () => {
               <Select.Viewport className="SelectViewport">
                 <Select.Group>
                   <Select.Label className="SelectLabel">
-                    Primary Election
+                    Leon County Primary Election
                   </Select.Label>
                   <SelectItem value="pe-2022">2022 Dashboard</SelectItem>
 
                   <Select.Separator className="SelectSeparator" />
 
                   <Select.Label className="SelectLabel">
-                    General Election
+                    Leon County General Election
                   </Select.Label>
                   <SelectItem value="ge-2022">2022 Dashboard</SelectItem>
                 </Select.Group>
@@ -67,7 +75,9 @@ const DashboardSelection = () => {
         </Select.Root>
 
         <Link
-          className={`green-btn p-3 w-24 text-center`}
+          className={` p-3 w-24 text-center ${
+            greenBackground ? "white-btn" : "green-btn"
+          }`}
           href={`/dashboard/${dashboard}`}
         >
           View

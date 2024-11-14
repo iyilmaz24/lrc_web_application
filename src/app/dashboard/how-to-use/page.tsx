@@ -1,20 +1,27 @@
 import DashboardSelection from "@/app/_components/DashboardSelection";
-import ResourceBoard from "@/app/_components/ResourceBoard";
+import Image from "next/image";
 
 export default function Page() {
   return (
     <>
-      <div className="green-top-border">How To Use The Dashboards</div>
+      <div className="green-top-border">Viewing The Dashboards</div>
       <main className="dashboard-content">
-        <span className="w-[600px] h-[350px] flex justify-center items-center m-4 mobile-iframe">
+        <Image
+          alt="dashboard art"
+          className="mt-6 mobile-iframe"
+          height={300}
+          width={400}
+          src={"/dashboard-artwork.jpeg"}
+        ></Image>
+        {/* <span className="w-[600px] h-[350px] flex justify-center items-center m-4 mobile-iframe">
           <iframe
             className="flex align-self-center"
             src={`https://www.youtube.com/embed/LYlET1xlbY8?si=Fb-pMSd2HNEbzBW7`}
             width={`100%`}
             height={`100%`}
           ></iframe>
-        </span>
-        <div className="howToText">
+        </span> */}
+        {/* <div className="howToText">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -27,7 +34,7 @@ export default function Page() {
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
-        </div>
+        </div> */}
         {/* <div className="min-h-20"></div>
         <div className="text-sm">
           <div>
