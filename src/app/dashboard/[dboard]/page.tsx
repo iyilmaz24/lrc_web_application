@@ -5,14 +5,15 @@ import DashboardSelection from "@/app/_components/DashboardSelection";
 export default function Page({ params }: { params: { dboard: string } }) {
   const { dboard } = params;
 
-  const dashboards = {
+  const dashboards: { [key: string]: string } = {
     "general-2022":
       "https://leroy-collins-institute.shinyapps.io/general_2022_v2/",
     "primary-2022":
       "https://leroy-collins-institute.shinyapps.io/LeonCounty2022Primary/?",
   };
 
-  const dashboardUrl = dashboards[dboard] || dashboards["general-2022"];
+  const dashboardUrl =
+    dashboards[dboard as keyof typeof dashboards] || dashboards["general-2022"];
 
   return (
     <main className="min-h-screen">

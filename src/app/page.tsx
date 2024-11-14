@@ -29,7 +29,9 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center py-4">
           <PdfButton
             buttonText={"Our Technical Report"}
-            filePath={"/23-LCI-002-Audit-Technical-Report-V1_4_LA2.pdf"}
+            filePath={
+              "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/23-LCI-002-Audit-Technical-Report-V1_4_LA2.pdf"
+            }
           />
           <span className="text-xs font-bold">Opens PDF in new tab*</span>
         </div>
