@@ -8,11 +8,24 @@ export default function Page() {
       <main className="dashboard-content">
         <Image
           alt="dashboard art"
-          className="mt-6 mobile-iframe"
+          className="mt-2 mobile-iframe"
           height={300}
           width={400}
-          src={"/dashboard-artwork.jpeg"}
+          src={
+            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-Campus-Background.jpg"
+          }
         ></Image>
+
+        <Image
+          className=""
+          alt="FSU COSPP Logo"
+          height={300}
+          width={400}
+          src={
+            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/LRCI-COSSPP-Horizontal-Logo.png"
+          }
+        />
+
         {/* <span className="w-[600px] h-[350px] flex justify-center items-center m-4 mobile-iframe">
           <iframe
             className="flex align-self-center"
@@ -170,7 +183,7 @@ export default function Page() {
           </div>
           <div>Thank you!</div>
         </div> */}
-        <span className="w-full m-6 mb-12">
+        <span className="w-full mt-6 mb-12">
           <DashboardSelection />
         </span>
       </main>

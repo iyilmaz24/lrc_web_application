@@ -12,15 +12,25 @@ export default function Home() {
           Florida Postelection Audit Project
         </div>
 
-        <Image
+        {/* <Image
           alt="home page art"
           className="mt-6 mobile-iframe "
           height={400}
           width={500}
           src={"/home-art.jpeg"}
-        ></Image>
+        ></Image> */}
 
-        <div className="max-w-2xl text-center px-6 py-3 mt-4">
+        <Image
+          className="bg-white bg-opacity-15 m-4 mt-10"
+          alt="FSU Election Law Program Logo"
+          height={300}
+          width={350}
+          src={
+            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELP-Horizontal-Logo.png"
+          }
+        />
+
+        <div className="max-w-3xl text-center px-6 py-3">
           All Florida counties are required by law to complete a postelection
           audit. In this project we provide information to the public about the
           accuracy of Florida ballot counting by presenting the results of each
@@ -65,7 +75,7 @@ export default function Home() {
         <h1 className="text-lg font-bold text-center mt-8">
           Streamlining Public Records Requests
         </h1>
-        <div className="max-w-2xl text-center px-6 py-3 mb-20 ">
+        <div className="max-w-3xl text-center px-6 py-3 mb-20 ">
           The ballot images provided here are downloadable and available for
           anyone to view. Counties that participate in the Florida post election
           audit project will refer all public records requests relating to the

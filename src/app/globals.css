@@ -126,7 +126,6 @@ body {
   overflow-y: scroll;
   width: 100%;
   padding: 2.5rem;
-  gap: 2rem;
   min-height: 70vh;
 }
 .howToText {
@@ -231,8 +230,7 @@ body {
     padding: 0rem 2rem 0rem 1.25rem;
   }
   .dashboard-content {
-    padding: 0rem 2rem 0rem 1.25rem;
-    gap: 1rem;
+    padding: 1rem;
   }
   .howToText {
     width: 100%;

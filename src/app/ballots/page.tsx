@@ -62,9 +62,9 @@ export default function Page() {
   const imageSrcs = Array.from(
     { length: endIndex - startIndex },
     (_, index) =>
-      `${process.env.BALLOT_S3_URL}/${imageFolder}/${imageFolder}-images-${
-        startIndex + index + 2
-      }.jpg`
+      `${
+        process.env.NEXT_PUBLIC_BALLOT_S3_URL
+      }/${imageFolder}/${imageFolder}-images-${startIndex + index + 2}.jpg`
   );
 
   return (
