@@ -9,8 +9,8 @@ export default function Page() {
         <Image
           alt="dashboard art"
           className="mt-2"
-          height={300}
-          width={400}
+          height={255}
+          width={375}
           src={
             "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-Campus-Background.jpg"
           }
@@ -19,7 +19,7 @@ export default function Page() {
         <Image
           className=""
           alt="FSU COSPP Logo"
-          height={300}
+          height={75}
           width={400}
           src={
             "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/LRCI-COSSPP-Horizontal-Logo.png"
