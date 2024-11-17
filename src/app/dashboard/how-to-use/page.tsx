@@ -8,7 +8,7 @@ export default function Page() {
       <main className="dashboard-content">
         <Image
           alt="dashboard art"
-          className="mt-2 mobile-iframe"
+          className="mt-2"
           height={300}
           width={400}
           src={

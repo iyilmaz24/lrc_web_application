@@ -23,7 +23,7 @@ export default function Home() {
         <Image
           className="bg-white bg-opacity-15 m-4 mt-10"
           alt="FSU Election Law Program Logo"
-          height={300}
+          height={85}
           width={350}
           src={
             "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELP-Horizontal-Logo.png"
