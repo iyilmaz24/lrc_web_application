@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="green-top-border">Viewing The Dashboards</div>
+      <div className="green-top-border">View The Dashboards</div>
       <main className="dashboard-content">
         <Image
           alt="dashboard art"

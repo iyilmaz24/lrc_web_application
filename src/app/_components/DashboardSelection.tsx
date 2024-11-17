@@ -10,6 +10,8 @@ import {
 import "./CSS/DashboardSelection.css";
 import { useState } from "react";
 import Link from "next/link";
+import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 
 const dashOptions = {
   "pe-2022": "primary-2022",
@@ -21,7 +23,8 @@ const DashboardSelection = ({
 }: {
   greenBackground?: boolean;
 }) => {
-  const [dashboard, setDashboard] = useState<string>("how-to-use");
+  // const [dashboard, setDashboard] = useState<string>("how-to-use");
+  const router = useRouter();
 
   return (
     <>
@@ -33,7 +36,10 @@ const DashboardSelection = ({
         <Select.Root
           onValueChange={(value) => {
             if (value in dashOptions) {
-              setDashboard(dashOptions[value as keyof typeof dashOptions]);
+              // setDashboard(dashOptions[value as keyof typeof dashOptions]);
+              router.push(
+                `/dashboard/${dashOptions[value as keyof typeof dashOptions]}`
+              );
             }
           }}
         >
@@ -57,14 +63,14 @@ const DashboardSelection = ({
                   <Select.Label className="SelectLabel">
                     Leon County Primary Election
                   </Select.Label>
-                  <SelectItem value="pe-2022">2022 Dashboard</SelectItem>
+                  <SelectItem value="pe-2022">2022 Primary</SelectItem>
 
                   <Select.Separator className="SelectSeparator" />
 
                   <Select.Label className="SelectLabel">
                     Leon County General Election
                   </Select.Label>
-                  <SelectItem value="ge-2022">2022 Dashboard</SelectItem>
+                  <SelectItem value="ge-2022">2022 General</SelectItem>
                 </Select.Group>
               </Select.Viewport>
               <Select.ScrollDownButton className="SelectScrollButton">
@@ -73,7 +79,7 @@ const DashboardSelection = ({
             </Select.Content>
           </Select.Portal>
         </Select.Root>
-
+        {/* 
         <Link
           className={` p-3 w-24 text-center ${
             greenBackground ? "white-btn" : "green-btn"
@@ -81,7 +87,7 @@ const DashboardSelection = ({
           href={`/dashboard/${dashboard}`}
         >
           View
-        </Link>
+        </Link> */}
       </div>
       {/* <span className="m-1 text-xs font-bold w-full">
         Select dashboard and click view*

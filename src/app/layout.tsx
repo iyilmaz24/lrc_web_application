@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import WebsiteNavigationBar from "../app/_components/Web/WebsiteNavigationBar";
 import WebsiteNavigationMenu from "../app/_components/Mobile/WebsiteNavigationMenu";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,17 @@ export default function RootLayout({
         <WebsiteNavigationMenu />
 
         {children}
-        <div className="green-bg min-h-20 text-4xl font-extrabold flex justify-center items-center" />
+        <div className="green-bg min-h-20 text-4xl font-extrabold flex justify-center items-center">
+          <Image
+            className="bg-white bg-opacity-15"
+            alt="FSU Election Law Program Logo"
+            height={100}
+            width={250}
+            src={
+              "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELP-Horizontal-Logo.png"
+            }
+          />
+        </div>
       </body>
     </html>
   );

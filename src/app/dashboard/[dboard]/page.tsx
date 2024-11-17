@@ -6,10 +6,8 @@ export default function Page({ params }: { params: { dboard: string } }) {
   const { dboard } = params;
 
   const dashboards: { [key: string]: string } = {
-    "general-2022":
-      "https://leroy-collins-institute.shinyapps.io/general_2022_v2/",
-    "primary-2022":
-      "https://leroy-collins-institute.shinyapps.io/LeonCounty2022Primary/?",
+    "general-2022": "http://3.80.121.120:3838/dashboard/",
+    "primary-2022": "http://3.80.121.120:3838/primary-dashboard/",
   };
 
   const dashboardUrl =
@@ -29,6 +27,15 @@ export default function Page({ params }: { params: { dboard: string } }) {
           width={`w-screen`}
           height={750}
         ></iframe>
+      </div>
+
+      <div className="w-full flex items-center justify-center green-bg">
+        <button
+          onClick={() => window.open(dashboardUrl, "_blank")}
+          className="p-4 white-btn"
+        >
+          Open Dashboard In Full Screen
+        </button>
       </div>
     </main>
   );
