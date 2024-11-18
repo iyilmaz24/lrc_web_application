@@ -6,11 +6,11 @@ import WebsiteNavigationMenu from "../app/_components/Mobile/WebsiteNavigationMe
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "LeRoy Collins Institute Post Election Audit Project",
-  description:
-    "All Florida counties are required by law to complete a postelection audit. In this project we provide information to the public about the accuracy of Florida ballot counting by presenting the results of each county’s post-election audit and where available the ballot images.",
-};
+// export const metadata: Metadata = {
+//   title: "LeRoy Collins Institute Post Election Audit Project",
+//   description:
+//     "All Florida counties are required by law to complete a postelection audit. In this project we provide information to the public about the accuracy of Florida ballot counting by presenting the results of each county’s post-election audit and where available the ballot images.",
+// };
 
 export default function RootLayout({
   children,
@@ -27,7 +27,7 @@ export default function RootLayout({
             "All Florida counties are required by law to complete a postelection audit. In this project we provide information to the public about the accuracy of Florida ballot counting by presenting the results of each county’s post-election audit and where available the ballot images."
           }
         />
-        <link rel="icon" href="/LRCI-Favicon.png" type="image/png" />
+        <link rel="icon" href="/LCI-Favicon.png" type="image/png" />
       </head>
 
       <body className={inter.className}>
