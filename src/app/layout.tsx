@@ -27,7 +27,11 @@ export default function RootLayout({
             "All Florida counties are required by law to complete a postelection audit. In this project we provide information to the public about the accuracy of Florida ballot counting by presenting the results of each county’s post-election audit and where available the ballot images."
           }
         />
-        <link rel="icon" href="/LCI-Favicon.png" type="image/png" />
+        <link
+          rel="icon"
+          href="https://lrci-main-web-app.s3.us-east-1.amazonaws.com/LCI-Favicon.png"
+          type="image/png"
+        />
       </head>
 
       <body className={inter.className}>
