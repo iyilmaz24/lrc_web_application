@@ -6,8 +6,8 @@ export default function Page({ params }: { params: { dboard: string } }) {
   const { dboard } = params;
 
   const dashboards: { [key: string]: string } = {
-    "general-2022": "http://3.80.121.120:3838/dashboard/",
-    "primary-2022": "http://3.80.121.120:3838/primary-dashboard/",
+    "general-2022": "https://lci-dashboards.duckdns.org/dashboard/",
+    "primary-2022": "https://lci-dashboards.duckdns.org/primary-dashboard/",
   };
 
   const dashboardUrl =
@@ -21,20 +21,20 @@ export default function Page({ params }: { params: { dboard: string } }) {
       </div>
 
       <div className="green-bg flex flex-col justify-center items-center py-8 px-4">
-        <div className="min-w-[85%] max-h-[90%] min-h-96 bg-gray-200 text-black flex flex-col items-center justify-center gap-12">
+        {/* <div className="min-w-[85%] max-h-[90%] min-h-96 bg-gray-200 text-black flex flex-col items-center justify-center gap-12">
           <div className="max-w-[80%] text-center">
             Embedded Dashboard Currently Unavailable
           </div>
           <div className="max-w-[80%] text-center font-bold">
             Please Use Full Screen Button
           </div>
-        </div>
-        {/* <iframe
+        </div> */}
+        <iframe
           className="min-w-[95%] max-h-[90%]"
           src={dashboardUrl}
           width={`w-screen`}
           height={750}
-        ></iframe> */}
+        ></iframe>
       </div>
 
       <div className="w-full flex items-center justify-center green-bg">
