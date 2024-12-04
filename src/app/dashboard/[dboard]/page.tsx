@@ -46,7 +46,7 @@ export default function Page({ params }: { params: { dboard: string } }) {
         </button>
       </div>
 
-      <div className="min-w-[95%] max-h-[90%] min-h-80 green-bg"></div>
+      {/* <div className="min-w-[95%] max-h-[90%] min-h-80 green-bg"></div> */}
     </main>
   );
 }
