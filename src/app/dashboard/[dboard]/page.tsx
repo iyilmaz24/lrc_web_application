@@ -6,12 +6,14 @@ export default function Page({ params }: { params: { dboard: string } }) {
   const { dboard } = params;
 
   const dashboards: { [key: string]: string } = {
-    "general-2022": "https://lci-dashboards.duckdns.org/dashboard/",
-    "primary-2022": "https://lci-dashboards.duckdns.org/primary-dashboard/",
+    "Leon-2022-General": "https://lci-dashboards.duckdns.org/dashboard/",
+    "Leon-2022-Primary":
+      "https://lci-dashboards.duckdns.org/primary-dashboard/",
   };
 
   const dashboardUrl =
-    dashboards[dboard as keyof typeof dashboards] || dashboards["general-2022"];
+    dashboards[dboard as keyof typeof dashboards] ||
+    dashboards["Leon-2022-General"];
 
   return (
     <main className="min-h-screen">
@@ -19,6 +21,8 @@ export default function Page({ params }: { params: { dboard: string } }) {
         <DashboardSelection greenBackground={true} />
         {/* <div className="">{dboard}</div> */}
       </div>
+
+      <div className="text-3xl font-bold">{dboard.split("-").join(" ")}</div>
 
       <div className="green-bg flex flex-col justify-center items-center py-8 px-4">
         {/* <div className="min-w-[85%] max-h-[90%] min-h-96 bg-gray-200 text-black flex flex-col items-center justify-center gap-12">
