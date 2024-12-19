@@ -8,14 +8,11 @@ import {
   ChevronUpIcon,
 } from "@radix-ui/react-icons";
 import "./CSS/DashboardSelection.css";
-import { useState } from "react";
-import Link from "next/link";
-import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/navigation";
 
-const dashOptions = {
-  "pe-2022": "primary-2022",
-  "ge-2022": "general-2022",
+const dashOptions: { [key: string]: string } = {
+  "pe-2022": "Leon-2022-Primary",
+  "ge-2022": "Leon-2022-General",
 };
 
 const DashboardSelection = ({
@@ -23,7 +20,6 @@ const DashboardSelection = ({
 }: {
   greenBackground?: boolean;
 }) => {
-  // const [dashboard, setDashboard] = useState<string>("how-to-use");
   const router = useRouter();
 
   return (
@@ -36,7 +32,6 @@ const DashboardSelection = ({
         <Select.Root
           onValueChange={(value) => {
             if (value in dashOptions) {
-              // setDashboard(dashOptions[value as keyof typeof dashOptions]);
               router.push(
                 `/dashboard/${dashOptions[value as keyof typeof dashOptions]}`
               );
@@ -48,7 +43,7 @@ const DashboardSelection = ({
             aria-label="Dashboard"
             onClick={(e) => e.stopPropagation()}
           >
-            <Select.Value placeholder="Select a dashboard type" />
+            <Select.Value placeholder={"Select a dashboard type"} />
             <Select.Icon className="SelectIcon">
               <ChevronDownIcon />
             </Select.Icon>

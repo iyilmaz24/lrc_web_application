@@ -1,7 +1,8 @@
 "use client";
 import BallotSelection from "./_components/BallotSelection";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import ImageDisplay from "./_components/ImageDisplay";
+import EnlargedImage from "./_components/EnlargedImage";
 
 export default function Page() {
   const pbwSigReplacedCount = 20;
@@ -43,9 +44,62 @@ export default function Page() {
   const endIndex = Math.min(startIndex + imagesPerPage, totalImages);
 
   useEffect(() => {
-    setTotalImages(imageCounts[imageFolder as keyof typeof imageCounts]);
+    setTotalImages(imageCounts[imageFolder as keyof typeof imageCounts] - 2);
     setPageNum(0);
   }, [imageFolder, imageCounts]);
+
+  const [currIndex, setCurrIndex] = useState(0);
+  const [isEnlarged, setIsEnlarged] = useState(false);
+
+  const [enlargedImage, setEnlargedImage] = useState("");
+
+  const handleImageClick = useCallback(
+    (index: number) => {
+      setIsEnlarged((prev) => !prev);
+      setCurrIndex(index);
+      setEnlargedImage(
+        `${process.env.NEXT_PUBLIC_BALLOT_S3_URL}/${imageFolder}/${imageFolder}-images-${index}.jpg`
+      );
+    },
+    [imageFolder]
+  );
+
+  const handleCloseClick = useCallback(() => {
+    setIsEnlarged(false);
+  }, []);
+
+  // const toggleImageEnlargement = useCallback(() => {
+  //   setIsEnlarged((prev) => !prev);
+  // }, []);
+
+  // const handleEnlargedImageClick = useCallback((e: React.MouseEvent) => {
+  //   e.stopPropagation();
+  // }, []);
+
+  const changeEnlargedImage = useCallback(
+    (index: number) => {
+      setEnlargedImage(
+        `${process.env.NEXT_PUBLIC_BALLOT_S3_URL}/${imageFolder}/${imageFolder}-images-${index}.jpg`
+      );
+    },
+    [imageFolder]
+  );
+
+  const handleNextBallot = (e: React.MouseEvent) => {
+    if (currIndex <= totalImages) {
+      e.stopPropagation(); // prevents the view from closing when clicking the next button
+      setCurrIndex(currIndex + 1);
+      changeEnlargedImage(currIndex + 1);
+    }
+  };
+
+  const handlePrevBallot = (e: React.MouseEvent) => {
+    if (currIndex > 2) {
+      e.stopPropagation(); // prevents the view from closing when clicking the prev button
+      setCurrIndex(currIndex - 1);
+      changeEnlargedImage(currIndex - 1);
+    }
+  };
 
   const handleNext = () => {
     if (endIndex < totalImages) {
@@ -78,9 +132,31 @@ export default function Page() {
               key={`${imageFolder}-${index}`}
               src={src}
               alt={`Image ${index + 1}`}
+              handleImageClick={() => handleImageClick(pageNum * 6 + index + 2)}
+              enlarged={false}
+              index={index}
             />
           ))}
           <div className="ballotButtonParent">
+            {/* <Image src={src} alt={alt} fill={true} objectFit="contain" /> */}
+            {/* <ImageDisplay
+              src={enlargedImage}
+              alt={`Image ${currIndex + 1}`}
+              index={currIndex}
+              handleImageClick={handleCloseClick}
+              enlarged={isEnlarged}
+            /> */}
+
+            <EnlargedImage
+              src={enlargedImage}
+              alt={`Image ${currIndex + 1}`}
+              index={currIndex}
+              handleImageClick={handleCloseClick}
+              enlarged={isEnlarged}
+              handleNextBallot={handleNextBallot}
+              handlePrevBallot={handlePrevBallot}
+            />
+
             <button
               className={`green-btn ballotButton `}
               onClick={handlePrevious}
