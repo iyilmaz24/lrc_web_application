@@ -68,14 +68,6 @@ export default function Page() {
     setIsEnlarged(false);
   }, []);
 
-  // const toggleImageEnlargement = useCallback(() => {
-  //   setIsEnlarged((prev) => !prev);
-  // }, []);
-
-  // const handleEnlargedImageClick = useCallback((e: React.MouseEvent) => {
-  //   e.stopPropagation();
-  // }, []);
-
   const changeEnlargedImage = useCallback(
     (index: number) => {
       setEnlargedImage(
@@ -138,15 +130,6 @@ export default function Page() {
             />
           ))}
           <div className="ballotButtonParent">
-            {/* <Image src={src} alt={alt} fill={true} objectFit="contain" /> */}
-            {/* <ImageDisplay
-              src={enlargedImage}
-              alt={`Image ${currIndex + 1}`}
-              index={currIndex}
-              handleImageClick={handleCloseClick}
-              enlarged={isEnlarged}
-            /> */}
-
             <EnlargedImage
               src={enlargedImage}
               alt={`Image ${currIndex + 1}`}
