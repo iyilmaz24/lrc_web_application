@@ -192,6 +192,17 @@ body {
   margin-top: 1rem;
 }
 
+.enlargedBallotButton {
+  background-color: white;
+  color: var(--lrc-green);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 4rem;
+}
+
 .mobile-only {
   display: none;
 }

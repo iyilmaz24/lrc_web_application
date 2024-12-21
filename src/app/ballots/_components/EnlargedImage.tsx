@@ -25,18 +25,31 @@ export default function EnlargedImage({
           onClick={(e) => handleImageClick(e, index)}
         >
           <div
-            className="enlarged-image relative max-w-4xl max-h-[90vh] w-full h-full flex justify-center items-center"
+            className="enlarged-image relative max-w-4xl max-h-[90vh] w-full h-full flex justify-evenly items-center"
             onClick={(e) => handleImageClick(e, index)}
           >
+            {/* TODO 1: Add pagination support for mobile devices by moving the buttons to bottom of image instaed of on the side
+                TODO 2: Change pagination button styling from it's currently added base styles 
+                TODO 3: Fix the styling for the currently selected dashboard's title on the other page*/}
+            <button
+              className={`green-btn enlargedBallotButton `}
+              onClick={(e) => handlePrevBallot(e)}
+            >
+              Previous
+            </button>
             <Image
               src={src}
               alt={`Image ${index + 1}`}
               width={500}
               height={300}
             />
+            <button
+              className={`green-btn enlargedBallotButton `}
+              onClick={(e) => handleNextBallot(e)}
+            >
+              Next
+            </button>
           </div>
-          <button onClick={(e) => handleNextBallot(e)}>Next</button>
-          <button onClick={(e) => handlePrevBallot(e)}>Prev</button>
         </div>
       )}
     </>
