@@ -193,14 +193,20 @@ body {
 }
 
 .enlargedBallotButton {
-  background-color: white;
-  color: var(--lrc-green);
+  background-color: slate;
+  color: white;
+  border: 0.25px solid white;
+  border-color: white;
+
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
   min-width: 4rem;
+}
+.enlargedButtonWebShow {
+  display: true;
 }
 
 .mobile-only {
@@ -215,6 +221,12 @@ body {
     display: none;
   }
   .desktop-navbar {
+    display: show;
+  }
+  .enlargedButtonMobileShow {
+    display: none;
+  }
+  .enlargedButtonWebShow {
     display: show;
   }
 }
@@ -283,6 +295,13 @@ body {
     justify-content: between;
     gap: 1rem;
     padding: 0rem;
+  }
+
+  .enlargedButtonMobileShow {
+    display: show;
+  }
+  .enlargedButtonWebShow {
+    display: none;
   }
 }
 

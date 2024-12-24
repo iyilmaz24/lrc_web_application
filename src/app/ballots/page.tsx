@@ -7,7 +7,7 @@ import EnlargedImage from "./_components/EnlargedImage";
 export default function Page() {
   const pbwSigReplacedCount = 20;
   const pbwStrayMarksCount = 29;
-  const pbwNoVoteCount = 52;
+  const pbwNoVoteCount = 51;
   const govOverInPrimCount = 22;
   const gewSigReplacedCount = 24;
   const gewStrayMarksCount = 20;

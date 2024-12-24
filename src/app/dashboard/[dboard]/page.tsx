@@ -22,7 +22,9 @@ export default function Page({ params }: { params: { dboard: string } }) {
         {/* <div className="">{dboard}</div> */}
       </div>
 
-      <div className="text-3xl font-bold">{dboard.split("-").join(" ")}</div>
+      <div className="text-3xl font-bold flex items-center justify-center green-bg">
+        {dboard.split("-").join(" ")}
+      </div>
 
       <div className="green-bg flex flex-col justify-center items-center py-8 px-4">
         {/* <div className="min-w-[85%] max-h-[90%] min-h-96 bg-gray-200 text-black flex flex-col items-center justify-center gap-12">

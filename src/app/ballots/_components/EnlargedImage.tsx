@@ -25,14 +25,11 @@ export default function EnlargedImage({
           onClick={(e) => handleImageClick(e, index)}
         >
           <div
-            className="enlarged-image relative max-w-4xl max-h-[90vh] w-full h-full flex justify-evenly items-center"
+            className="enlarged-image relative max-w-4xl max-h-[90vh] w-full h-full flex justify-evenly items-center enlargedButtonWebShow"
             onClick={(e) => handleImageClick(e, index)}
           >
-            {/* TODO 1: Add pagination support for mobile devices by moving the buttons to bottom of image instaed of on the side
-                TODO 2: Change pagination button styling from it's currently added base styles 
-                TODO 3: Fix the styling for the currently selected dashboard's title on the other page*/}
             <button
-              className={`green-btn enlargedBallotButton `}
+              className={`green-btn enlargedBallotButton enlargedButtonWebShow `}
               onClick={(e) => handlePrevBallot(e)}
             >
               Previous
@@ -40,15 +37,41 @@ export default function EnlargedImage({
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={500}
+              width={450}
               height={300}
             />
             <button
-              className={`green-btn enlargedBallotButton `}
+              className={`green-btn enlargedBallotButton enlargedButtonWebShow `}
               onClick={(e) => handleNextBallot(e)}
             >
               Next
             </button>
+          </div>
+
+          <div
+            className="enlarged-image relative max-w-4xl max-h-[95vh] w-full h-full flex flex-col justify-center items-center gap-5 enlargedButtonMobileShow"
+            onClick={(e) => handleImageClick(e, index)}
+          >
+            <Image
+              src={src}
+              alt={`Image ${index + 1}`}
+              width={350}
+              height={225}
+            />
+            <div className="flex items-center justify-evenly w-full enlargedButtonMobileShow">
+              <button
+                className={`green-btn enlargedBallotButton enlargedButtonMobileShow`}
+                onClick={(e) => handlePrevBallot(e)}
+              >
+                Previous
+              </button>
+              <button
+                className={`green-btn enlargedBallotButton enlargedButtonMobileShow`}
+                onClick={(e) => handleNextBallot(e)}
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       )}
