@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
 import DashboardSelection from "@/app/_components/DashboardSelection";
+import { useState } from "react";
 
 export default function Page({ params }: { params: { dboard: string } }) {
   const { dboard } = params;
+  const [dashboardLoading, setDashboardLoading] = useState(true);
 
   const dashboards: { [key: string]: string } = {
     "Leon-2022-General": "https://lci-dashboards.duckdns.org/dashboard/",
@@ -19,27 +20,30 @@ export default function Page({ params }: { params: { dboard: string } }) {
     <main className="min-h-screen">
       <div className="min-h-[125px] flex flex-col items-center justify-center green-bg">
         <DashboardSelection greenBackground={true} />
-        {/* <div className="">{dboard}</div> */}
       </div>
 
       <div className="text-3xl font-bold flex items-center justify-center green-bg">
         {dboard.split("-").join(" ")}
       </div>
 
-      <div className="green-bg flex flex-col justify-center items-center py-8 px-4">
-        {/* <div className="min-w-[85%] max-h-[90%] min-h-96 bg-gray-200 text-black flex flex-col items-center justify-center gap-12">
-          <div className="max-w-[80%] text-center">
-            Embedded Dashboard Currently Unavailable
+      <div className="green-bg flex flex-col justify-center items-center py-8 px-4 ">
+        {dashboardLoading && (
+          <div className="min-w-[90%] h-[90%] bg-gray-200 text-black flex flex-col items-center justify-center gap-12 absolute">
+            <div className="max-w-[80%] text-center">
+              Dashboard Also Available In Full Screen Using Button
+            </div>
+            <div className="max-w-[80%] text-center font-bold">
+              Dashboard Loading...
+            </div>
           </div>
-          <div className="max-w-[80%] text-center font-bold">
-            Please Use Full Screen Button
-          </div>
-        </div> */}
+        )}
+
         <iframe
           className="min-w-[95%] max-h-[90%]"
           src={dashboardUrl}
           width={`w-screen`}
           height={750}
+          onLoad={() => setDashboardLoading(false)}
         ></iframe>
       </div>
 
@@ -51,8 +55,6 @@ export default function Page({ params }: { params: { dboard: string } }) {
           Open Dashboard In Full Screen
         </button>
       </div>
-
-      {/* <div className="min-w-[95%] max-h-[90%] min-h-80 green-bg"></div> */}
     </main>
   );
 }
