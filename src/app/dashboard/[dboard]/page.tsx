@@ -1,5 +1,6 @@
 "use client";
 import DashboardSelection from "@/app/_components/DashboardSelection";
+import LoadingSpinner from "@/app/_components/LoadingSpinner";
 import { useState } from "react";
 
 export default function Page({ params }: { params: { dboard: string } }) {
@@ -35,6 +36,7 @@ export default function Page({ params }: { params: { dboard: string } }) {
             <div className="max-w-[80%] text-center font-bold">
               Dashboard Loading...
             </div>
+            <LoadingSpinner />
           </div>
         )}
 
