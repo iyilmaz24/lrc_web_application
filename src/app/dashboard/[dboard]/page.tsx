@@ -59,7 +59,7 @@ export default function Page({ params }: { params: { dboard: string } }) {
           src={dashboardUrl}
           width={`w-screen`}
           height={750}
-          onLoad={() => setDashboardLoading(true)}
+          onLoad={() => setDashboardLoading(false)}
         ></iframe>
       </div>
 
