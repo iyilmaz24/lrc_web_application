@@ -1,3 +1,4 @@
+import DashboardFilterSelect from "@/app/_components/DashboardFilterSelect";
 import DashboardSelection from "@/app/_components/DashboardSelection";
 import Image from "next/image";
 
@@ -183,8 +184,8 @@ export default function Page() {
           </div>
           <div>Thank you!</div>
         </div> */}
-        <span className="w-full mt-6 mb-12">
-          <DashboardSelection />
+        <span className="mt-6 mb-12 ">
+          <DashboardFilterSelect />
         </span>
       </main>
     </>

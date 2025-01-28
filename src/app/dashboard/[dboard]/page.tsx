@@ -1,5 +1,5 @@
 "use client";
-import DashboardSelection from "@/app/_components/DashboardSelection";
+import DashboardFilterSelect from "@/app/_components/DashboardFilterSelect";
 import LoadingSpinner from "@/app/_components/LoadingSpinner";
 import { useState } from "react";
 
@@ -8,19 +8,20 @@ export default function Page({ params }: { params: { dboard: string } }) {
   const [dashboardLoading, setDashboardLoading] = useState(true);
 
   const dashboards: { [key: string]: string } = {
-    "Leon-2022-General": "https://lci-dashboards.duckdns.org/dashboard/",
-    "Leon-2022-Primary":
+    "Leon-General-2022": "https://lci-dashboards.duckdns.org/dashboard/",
+    "Leon-Primary-2022":
       "https://lci-dashboards.duckdns.org/primary-dashboard/",
+    "Fallback-Error": "https://google.com/404",
   };
 
   const dashboardUrl =
     dashboards[dboard as keyof typeof dashboards] ||
-    dashboards["Leon-2022-General"];
+    dashboards["Fallback-Error"];
 
   return (
     <main className="min-h-screen">
-      <div className="min-h-[125px] flex flex-col items-center justify-center green-bg">
-        <DashboardSelection greenBackground={true} />
+      <div className="min-h-[125px] flex flex-col items-center justify-center green-bg-dashboard-select">
+        <DashboardFilterSelect />
       </div>
 
       <div className="text-3xl font-bold flex items-center justify-center green-bg">

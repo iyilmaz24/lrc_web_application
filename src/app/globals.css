@@ -55,6 +55,13 @@ body {
   background-color: var(--lrc-green);
   color: var(--lrc-white-text);
 }
+.green-bg-dashboard-select {
+  background-color: var(--lrc-green);
+  padding: 1rem;
+  p {
+    color: var(--lrc-white-text);
+  }
+}
 
 .green-btn {
   background-color: var(--lrc-green);

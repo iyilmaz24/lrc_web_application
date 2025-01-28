@@ -11,8 +11,8 @@ import "./CSS/DashboardSelection.css";
 import { useRouter } from "next/navigation";
 
 const dashOptions: { [key: string]: string } = {
-  "pe-2022": "Leon-2022-Primary",
-  "ge-2022": "Leon-2022-General",
+  "pe-2022": "Leon-Primary-2022",
+  "ge-2022": "Leon-General-2022",
 };
 
 const DashboardSelection = ({

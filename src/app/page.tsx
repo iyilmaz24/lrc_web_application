@@ -1,6 +1,7 @@
 import PdfButton from "./_components/PdfButton";
 import DashboardSelection from "./_components/DashboardSelection";
 import Image from "next/image";
+import DashboardFilterSelect from "./_components/DashboardFilterSelect";
 
 export default function Home() {
   const lorem_ipsum =
@@ -67,8 +68,9 @@ export default function Home() {
             height={`100%`}
           ></iframe>
         </span> */}
-        <span className="m-4 mt-8 w-full">
-          <DashboardSelection />
+
+        <span className="m-4 mt-8 w-full flex justify-center">
+          <DashboardFilterSelect />
         </span>
 
         <div></div>
