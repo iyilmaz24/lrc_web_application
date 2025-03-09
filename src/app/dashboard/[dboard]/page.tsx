@@ -11,6 +11,8 @@ export default function Page({ params }: { params: { dboard: string } }) {
     "Leon-General-2022": "https://lci-dashboards.duckdns.org/dashboard/",
     "Leon-Primary-2022":
       "https://lci-dashboards.duckdns.org/primary-dashboard/",
+    "General-Election-2024":
+      "https://lci-dashboards.duckdns.org/leon-gen-2024/",
     "Fallback-Error": "https://google.com/404",
   };
 

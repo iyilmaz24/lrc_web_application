@@ -136,7 +136,7 @@ const DashboardFilterSelect = () => {
 
   const availableCounties = {
     "2022": ["Leon General", "Leon Primary"],
-    "2024": ["Osceola County"],
+    "2024": ["General Election", "Osceola County"],
   };
 
   const sampleCriteria = [
