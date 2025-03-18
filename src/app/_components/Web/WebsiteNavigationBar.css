@@ -12,9 +12,10 @@ p {
 }
 
 .NavigationMenuRoot {
-  position: relative;
+  /* position: relative; */
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
   /* min-width: 100vw; */
   z-index: 1;
   gap: 2rem;

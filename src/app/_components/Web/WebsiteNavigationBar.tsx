@@ -1,8 +1,8 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import "./WebsiteNavigationBar.css";
 import classNames from "classnames";
-import { CaretDownIcon } from "@radix-ui/react-icons";
-import LRC_H_LOGO from "@/../public/lrc-horizontal-logo.png";
+import LRC_H_LOGO from "@/../public/lrc-vertical-logo.png";
+import FSU_ELC_LOGO from "@/../public/FSU-ELC-Vertical-Logo.png";
 import React, { forwardRef, ForwardedRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,14 +12,21 @@ import Image from "next/image";
 export function WebsiteNavigationBar() {
   return (
     <>
-      <header className="p-12 flex justify-center desktop-navbar">
+      <header className="p-6 flex justify-center desktop-navbar">
         <Link href="/" className="flex justify-center items-center px-8">
           <Image
             className=""
             src={LRC_H_LOGO}
             alt="LeRoy Collins Institute Logo"
-            width={200}
-            height={150}
+            width={105}
+            height={100}
+          />
+          <Image
+            className="pt-2"
+            src={FSU_ELC_LOGO}
+            alt="Florida State University Election Law Center Logo"
+            width={115}
+            height={100}
           />
         </Link>
         <NavigationMenu.Root className="NavigationMenuRoot ">

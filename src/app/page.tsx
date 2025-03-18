@@ -27,7 +27,7 @@ export default function Home() {
           height={85}
           width={350}
           src={
-            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELP-Horizontal-Logo.png"
+            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELC-Horizontal-Logo.png"
           }
         />
 

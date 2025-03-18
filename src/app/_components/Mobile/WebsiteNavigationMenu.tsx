@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import LRC_H_LOGO from "@/../public/lrc-horizontal-logo.png";
+import LRC_H_LOGO from "@/../public/lrc-vertical-logo.png";
+import FSU_ELC_LOGO from "@/../public/FSU-ELC-Vertical-Logo.png";
 import { useState } from "react";
 
 export default function WebsiteNavigationMenu() {
@@ -44,14 +45,21 @@ export default function WebsiteNavigationMenu() {
   );
   return (
     <header className="flex flex-col justify-between items-center mobile-navbar">
-      <div className="flex justify-evenly items-center w-full mt-8 mx-2">
+      <div className="flex justify-evenly items-center w-full mt-2 mx-2 gap-4">
         <Link href="/" className="flex justify-center items-center mx-6">
           <Image
             className=""
             src={LRC_H_LOGO}
             alt="LeRoy Collins Institute Logo"
-            width={200}
-            height={150}
+            width={90}
+            height={100}
+          />
+          <Image
+            className="pt-2"
+            src={FSU_ELC_LOGO}
+            alt="Florida State University Election Law Center Logo"
+            width={100}
+            height={100}
           />
         </Link>
         <button
@@ -63,7 +71,7 @@ export default function WebsiteNavigationMenu() {
       </div>
 
       {!isOpen ? (
-        <div className="m-3"></div>
+        <div className=""></div>
       ) : (
         <nav className="flex flex-col justify-center items-center w-full mt-4 mb-2 border-y-2 border-y-gray-200">
           <Link href="/" className={`${linkStyle}`}>
