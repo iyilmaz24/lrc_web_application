@@ -71,7 +71,7 @@ export default function WebsiteNavigationMenu() {
       </div>
 
       {!isOpen ? (
-        <div className=""></div>
+        <div className="mt-2"></div>
       ) : (
         <nav className="flex flex-col justify-center items-center w-full mt-4 mb-2 border-y-2 border-y-gray-200">
           <Link href="/" className={`${linkStyle}`}>
