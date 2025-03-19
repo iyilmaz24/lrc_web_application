@@ -22,16 +22,16 @@ export default function Home() {
         ></Image> */}
 
         <Image
-          className="bg-white bg-opacity-15 m-4 mt-10"
+          className="bg-white bg-opacity-15 m-2 mt-8"
           alt="FSU Election Law Program Logo"
           height={85}
-          width={350}
+          width={380}
           src={
-            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-ELC-Horizontal-Logo.png"
+            "https://lrci-main-web-app.s3.us-east-1.amazonaws.com/FSU-LCI-Horizontal.jpg"
           }
         />
 
-        <div className="max-w-3xl text-center px-6 py-3">
+        <div className="max-w-3xl text-center px-6 pb-3">
           All Florida counties are required by law to complete a postelection
           audit. In this project we provide information to the public about the
           accuracy of Florida ballot counting by presenting the results of each
