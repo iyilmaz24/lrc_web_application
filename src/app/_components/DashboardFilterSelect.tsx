@@ -136,7 +136,7 @@ const DashboardFilterSelect = () => {
 
   const availableCounties = {
     "2022": ["Leon General", "Leon Primary"],
-    "2024": ["Leon General"],
+    "2024": ["Leon General", "Osceola General"],
   };
 
   const sampleCriteria = [

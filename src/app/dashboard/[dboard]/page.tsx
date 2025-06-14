@@ -12,6 +12,8 @@ export default function Page({ params }: { params: { dboard: string } }) {
     "Leon-Primary-2022":
       "https://lci-dashboards.duckdns.org/primary-dashboard/",
     "Leon-General-2024": "https://lci-dashboards.duckdns.org/leon-gen-2024/",
+    "Osceola-General-2024":
+      "https://lci-dashboards.duckdns.org/osceola-gen-2024/",
     "Fallback-Error": "https://google.com/404",
   };
 
